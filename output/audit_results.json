@@ -1,0 +1,4605 @@
+{
+  "summary": {
+    "invoices_audited": 508,
+    "calculation_errors": 23,
+    "rate_card_violations": 0,
+    "gst_mismatches": 15,
+    "mystery_surcharges": 12,
+    "subtotal_mismatches": 7,
+    "duplicate_invoices": 8,
+    "total_overcharge": 17560098.94
+  },
+  "breakdown": {
+    "calculation_errors": 61181.58,
+    "rate_card_violations": 0,
+    "gst_mismatches": 1200082.26,
+    "mystery_surcharges": 24613.97,
+    "subtotal_mismatches": 18186.35,
+    "duplicate_invoices": 16256034.78
+  },
+  "issues": [
+    {
+      "invoice_id": "INV-0005",
+      "vendor_name": "Sri Lakshmi Plastics",
+      "issue_type": "calculation_error",
+      "description": "Custom printed boxes",
+      "quantity": 71,
+      "unit_price": 190.84,
+      "billed_amount": 14215.77,
+      "expected_amount": 13549.64,
+      "overcharge": 666.13,
+      "line_index": 0,
+      "invoice_date": "2025-12-13",
+      "invoice_total": 49536.53
+    },
+    {
+      "invoice_id": "INV-0009",
+      "vendor_name": "DigiBoost Media",
+      "issue_type": "calculation_error",
+      "description": "Influencer campaign fee",
+      "quantity": 4,
+      "unit_price": 20686.59,
+      "billed_amount": 86324.15,
+      "expected_amount": 82746.36,
+      "overcharge": 3577.79,
+      "line_index": 0,
+      "invoice_date": "2025-02-05",
+      "invoice_total": 722813.28
+    },
+    {
+      "invoice_id": "INV-0039",
+      "vendor_name": "Delhivery Logistics",
+      "issue_type": "calculation_error",
+      "description": "Freight charges - Zone B",
+      "quantity": 52,
+      "unit_price": 271.8,
+      "billed_amount": 17550.51,
+      "expected_amount": 14133.6,
+      "overcharge": 3416.91,
+      "line_index": 0,
+      "invoice_date": "2025-09-27",
+      "invoice_total": 33213.21
+    },
+    {
+      "invoice_id": "INV-0063",
+      "vendor_name": "DigiBoost Media",
+      "issue_type": "calculation_error",
+      "description": "Influencer campaign fee",
+      "quantity": 65,
+      "unit_price": 20686.59,
+      "billed_amount": 1347353.19,
+      "expected_amount": 1344628.35,
+      "overcharge": 2724.84,
+      "line_index": 0,
+      "invoice_date": "2025-04-22",
+      "invoice_total": 1823367.49
+    },
+    {
+      "invoice_id": "INV-0065",
+      "vendor_name": "Primus Biotech",
+      "issue_type": "calculation_error",
+      "description": "Hyaluronic acid",
+      "quantity": 23,
+      "unit_price": 667.81,
+      "billed_amount": 18850.3,
+      "expected_amount": 15359.63,
+      "overcharge": 3490.67,
+      "line_index": 0,
+      "invoice_date": "2025-09-10",
+      "invoice_total": 381680.84
+    },
+    {
+      "invoice_id": "INV-0122",
+      "vendor_name": "Brandwise Digital",
+      "issue_type": "calculation_error",
+      "description": "SEO services monthly",
+      "quantity": 19,
+      "unit_price": 28905.15,
+      "billed_amount": 551199.34,
+      "expected_amount": 549197.85,
+      "overcharge": 2001.49,
+      "line_index": 0,
+      "invoice_date": "2025-12-05",
+      "invoice_total": 8038763.83
+    },
+    {
+      "invoice_id": "INV-0147",
+      "vendor_name": "Herb Valley Extracts",
+      "issue_type": "calculation_error",
+      "description": "Minoxidil solution 5%",
+      "quantity": 35,
+      "unit_price": 843.06,
+      "billed_amount": 30188.6,
+      "expected_amount": 29507.1,
+      "overcharge": 681.5,
+      "line_index": 0,
+      "invoice_date": "2025-09-24",
+      "invoice_total": 176021.35
+    },
+    {
+      "invoice_id": "INV-0183",
+      "vendor_name": "Xpressbees Courier",
+      "issue_type": "calculation_error",
+      "description": "RTO charges",
+      "quantity": 19,
+      "unit_price": 82.88,
+      "billed_amount": 6166.29,
+      "expected_amount": 1574.72,
+      "overcharge": 4591.57,
+      "line_index": 0,
+      "invoice_date": "2025-10-21",
+      "invoice_total": 19116.25
+    },
+    {
+      "invoice_id": "INV-0195",
+      "vendor_name": "Primus Biotech",
+      "issue_type": "calculation_error",
+      "description": "Minoxidil solution 5%",
+      "quantity": 1,
+      "unit_price": 2307.05,
+      "billed_amount": 3275.63,
+      "expected_amount": 2307.05,
+      "overcharge": 968.58,
+      "line_index": 0,
+      "invoice_date": "2025-11-08",
+      "invoice_total": 157985.76
+    },
+    {
+      "invoice_id": "INV-0196",
+      "vendor_name": "Sai Pharma Ingredients",
+      "issue_type": "calculation_error",
+      "description": "Zinc gluconate",
+      "quantity": 14,
+      "unit_price": 4935.33,
+      "billed_amount": 74062.47,
+      "expected_amount": 69094.62,
+      "overcharge": 4967.85,
+      "line_index": 0,
+      "invoice_date": "2025-03-26",
+      "invoice_total": 700856.31
+    },
+    {
+      "invoice_id": "INV-0201",
+      "vendor_name": "Ashok Packaging Pvt Ltd",
+      "issue_type": "calculation_error",
+      "description": "Tape rolls pack of 6",
+      "quantity": 24,
+      "unit_price": 77.71,
+      "billed_amount": 2840.26,
+      "expected_amount": 1865.04,
+      "overcharge": 975.22,
+      "line_index": 0,
+      "invoice_date": "2025-01-08",
+      "invoice_total": 36749.28
+    },
+    {
+      "invoice_id": "INV-0206",
+      "vendor_name": "Ashok Packaging Pvt Ltd",
+      "issue_type": "calculation_error",
+      "description": "Corrugated boxes 7x5x3",
+      "quantity": 68,
+      "unit_price": 146.87,
+      "billed_amount": 13101.24,
+      "expected_amount": 9987.16,
+      "overcharge": 3114.08,
+      "line_index": 0,
+      "invoice_date": "2025-01-02",
+      "invoice_total": 28755.37
+    },
+    {
+      "invoice_id": "INV-0215",
+      "vendor_name": "Herb Valley Extracts",
+      "issue_type": "calculation_error",
+      "description": "Collagen peptides",
+      "quantity": 39,
+      "unit_price": 2632.28,
+      "billed_amount": 106677.7,
+      "expected_amount": 102658.92,
+      "overcharge": 4018.78,
+      "line_index": 0,
+      "invoice_date": "2025-12-13",
+      "invoice_total": 235415.68
+    },
+    {
+      "invoice_id": "INV-0224",
+      "vendor_name": "Primus Biotech",
+      "issue_type": "calculation_error",
+      "description": "Biotin powder 99%",
+      "quantity": 62,
+      "unit_price": 2117.04,
+      "billed_amount": 135915.23,
+      "expected_amount": 131256.48,
+      "overcharge": 4658.75,
+      "line_index": 0,
+      "invoice_date": "2025-05-28",
+      "invoice_total": 244711.39
+    },
+    {
+      "invoice_id": "INV-0239",
+      "vendor_name": "PixelCraft Studios",
+      "issue_type": "calculation_error",
+      "description": "Video production",
+      "quantity": 55,
+      "unit_price": 40738.32,
+      "billed_amount": 2241597.18,
+      "expected_amount": 2240607.6,
+      "overcharge": 989.58,
+      "line_index": 0,
+      "invoice_date": "2025-02-08",
+      "invoice_total": 3412930.73
+    },
+    {
+      "invoice_id": "INV-0267",
+      "vendor_name": "Herb Valley Extracts",
+      "issue_type": "calculation_error",
+      "description": "Zinc gluconate",
+      "quantity": 29,
+      "unit_price": 2025.6,
+      "billed_amount": 61002.91,
+      "expected_amount": 58742.4,
+      "overcharge": 2260.51,
+      "line_index": 0,
+      "invoice_date": "2025-07-11",
+      "invoice_total": 642533.19
+    },
+    {
+      "invoice_id": "INV-0299",
+      "vendor_name": "BlueDart Express",
+      "issue_type": "calculation_error",
+      "description": "Surface transport",
+      "quantity": 54,
+      "unit_price": 236.97,
+      "billed_amount": 14024.27,
+      "expected_amount": 12796.38,
+      "overcharge": 1227.89,
+      "line_index": 0,
+      "invoice_date": "2025-12-22",
+      "invoice_total": 29756.79
+    },
+    {
+      "invoice_id": "INV-0351",
+      "vendor_name": "Xpressbees Courier",
+      "issue_type": "calculation_error",
+      "description": "Surface transport",
+      "quantity": 19,
+      "unit_price": 243.01,
+      "billed_amount": 6473.39,
+      "expected_amount": 4617.19,
+      "overcharge": 1856.2,
+      "line_index": 0,
+      "invoice_date": "2025-07-24",
+      "invoice_total": 106790.35
+    },
+    {
+      "invoice_id": "INV-0356",
+      "vendor_name": "CloudNine Ads",
+      "issue_type": "calculation_error",
+      "description": "Video production",
+      "quantity": 35,
+      "unit_price": 25530.76,
+      "billed_amount": 898573.03,
+      "expected_amount": 893576.6,
+      "overcharge": 4996.43,
+      "line_index": 0,
+      "invoice_date": "2025-07-25",
+      "invoice_total": 2626543.08
+    },
+    {
+      "invoice_id": "INV-0407",
+      "vendor_name": "Sri Lakshmi Plastics",
+      "issue_type": "calculation_error",
+      "description": "Shrink wrap rolls",
+      "quantity": 51,
+      "unit_price": 109.83,
+      "billed_amount": 8282.6,
+      "expected_amount": 5601.33,
+      "overcharge": 2681.27,
+      "line_index": 0,
+      "invoice_date": "2025-02-24",
+      "invoice_total": 30481.64
+    },
+    {
+      "invoice_id": "INV-0411",
+      "vendor_name": "PixelCraft Studios",
+      "issue_type": "calculation_error",
+      "description": "Email campaign setup",
+      "quantity": 50,
+      "unit_price": 19401.48,
+      "billed_amount": 970883.41,
+      "expected_amount": 970074.0,
+      "overcharge": 809.41,
+      "line_index": 0,
+      "invoice_date": "2025-04-18",
+      "invoice_total": 6256878.92
+    },
+    {
+      "invoice_id": "INV-0468",
+      "vendor_name": "Primus Biotech",
+      "issue_type": "calculation_error",
+      "description": "Collagen peptides",
+      "quantity": 17,
+      "unit_price": 4069.27,
+      "billed_amount": 73985.46,
+      "expected_amount": 69177.59,
+      "overcharge": 4807.87,
+      "line_index": 0,
+      "invoice_date": "2025-04-01",
+      "invoice_total": 343827.39
+    },
+    {
+      "invoice_id": "INV-0469",
+      "vendor_name": "Brandwise Digital",
+      "issue_type": "calculation_error",
+      "description": "Creative production",
+      "quantity": 73,
+      "unit_price": 42204.67,
+      "billed_amount": 3082639.17,
+      "expected_amount": 3080940.91,
+      "overcharge": 1698.26,
+      "line_index": 0,
+      "invoice_date": "2025-03-01",
+      "invoice_total": 5164143.82
+    },
+    {
+      "invoice_id": "INV-0064",
+      "vendor_name": "DigiBoost Media",
+      "issue_type": "gst_mismatch",
+      "description": "SEO services monthly",
+      "hsn_code": "9973",
+      "taxable_amount": 1270542,
+      "invoice_gst_rate": 28,
+      "expected_gst_rate": 18,
+      "gst_overcharge": 127054.2,
+      "overcharge": 127054.2,
+      "line_index": 0,
+      "invoice_date": "2025-12-15",
+      "invoice_total": 6876164.83
+    },
+    {
+      "invoice_id": "INV-0099",
+      "vendor_name": "Brandwise Digital",
+      "issue_type": "gst_mismatch",
+      "description": "Google Ads management",
+      "hsn_code": "9973",
+      "taxable_amount": 2535642.12,
+      "invoice_gst_rate": 28,
+      "expected_gst_rate": 18,
+      "gst_overcharge": 253564.21,
+      "overcharge": 253564.21,
+      "line_index": 0,
+      "invoice_date": "2025-09-25",
+      "invoice_total": 7896793.07
+    },
+    {
+      "invoice_id": "INV-0103",
+      "vendor_name": "DigiBoost Media",
+      "issue_type": "gst_mismatch",
+      "description": "Meta ad spend",
+      "hsn_code": "9973",
+      "taxable_amount": 502253.96,
+      "invoice_gst_rate": 28,
+      "expected_gst_rate": 18,
+      "gst_overcharge": 50225.4,
+      "overcharge": 50225.4,
+      "line_index": 0,
+      "invoice_date": "2025-11-14",
+      "invoice_total": 1482459.22
+    },
+    {
+      "invoice_id": "INV-0112",
+      "vendor_name": "Ashok Packaging Pvt Ltd",
+      "issue_type": "gst_mismatch",
+      "description": "Custom printed boxes",
+      "hsn_code": "7010",
+      "taxable_amount": 854.91,
+      "invoice_gst_rate": 28,
+      "expected_gst_rate": 18,
+      "gst_overcharge": 85.49,
+      "overcharge": 85.49,
+      "line_index": 0,
+      "invoice_date": "2025-03-24",
+      "invoice_total": 3478.43
+    },
+    {
+      "invoice_id": "INV-0127",
+      "vendor_name": "Ecom Express Services",
+      "issue_type": "gst_mismatch",
+      "description": "Freight charges - Zone C",
+      "hsn_code": "9966",
+      "taxable_amount": 220.74,
+      "invoice_gst_rate": 28,
+      "expected_gst_rate": 18,
+      "gst_overcharge": 22.07,
+      "overcharge": 22.07,
+      "line_index": 0,
+      "invoice_date": "2025-02-23",
+      "invoice_total": 9217.86
+    },
+    {
+      "invoice_id": "INV-0143",
+      "vendor_name": "Kaival Nutraceuticals",
+      "issue_type": "gst_mismatch",
+      "description": "Biotin powder 99%",
+      "hsn_code": "2106",
+      "taxable_amount": 134632.1,
+      "invoice_gst_rate": 28,
+      "expected_gst_rate": 18,
+      "gst_overcharge": 13463.21,
+      "overcharge": 13463.21,
+      "line_index": 0,
+      "invoice_date": "2025-01-26",
+      "invoice_total": 411803.23
+    },
+    {
+      "invoice_id": "INV-0158",
+      "vendor_name": "DigiBoost Media",
+      "issue_type": "gst_mismatch",
+      "description": "Video production",
+      "hsn_code": "9984",
+      "taxable_amount": 1616318.2,
+      "invoice_gst_rate": 28,
+      "expected_gst_rate": 18,
+      "gst_overcharge": 161631.82,
+      "overcharge": 161631.82,
+      "line_index": 0,
+      "invoice_date": "2025-02-25",
+      "invoice_total": 5303378.46
+    },
+    {
+      "invoice_id": "INV-0169",
+      "vendor_name": "Ashok Packaging Pvt Ltd",
+      "issue_type": "gst_mismatch",
+      "description": "Air pillow packs",
+      "hsn_code": "7010",
+      "taxable_amount": 9539.84,
+      "invoice_gst_rate": 28,
+      "expected_gst_rate": 18,
+      "gst_overcharge": 953.98,
+      "overcharge": 953.98,
+      "line_index": 0,
+      "invoice_date": "2025-06-24",
+      "invoice_total": 62311.87
+    },
+    {
+      "invoice_id": "INV-0180",
+      "vendor_name": "Brandwise Digital",
+      "issue_type": "gst_mismatch",
+      "description": "Google Ads management",
+      "hsn_code": "9984",
+      "taxable_amount": 2766155.04,
+      "invoice_gst_rate": 28,
+      "expected_gst_rate": 18,
+      "gst_overcharge": 276615.5,
+      "overcharge": 276615.5,
+      "line_index": 0,
+      "invoice_date": "2025-06-06",
+      "invoice_total": 8047265.19
+    },
+    {
+      "invoice_id": "INV-0194",
+      "vendor_name": "PixelCraft Studios",
+      "issue_type": "gst_mismatch",
+      "description": "Creative production",
+      "hsn_code": "9984",
+      "taxable_amount": 1613778.16,
+      "invoice_gst_rate": 28,
+      "expected_gst_rate": 18,
+      "gst_overcharge": 161377.82,
+      "overcharge": 161377.82,
+      "line_index": 0,
+      "invoice_date": "2025-05-14",
+      "invoice_total": 6507152.48
+    },
+    {
+      "invoice_id": "INV-0258",
+      "vendor_name": "Xpressbees Courier",
+      "issue_type": "gst_mismatch",
+      "description": "Freight charges - Zone A",
+      "hsn_code": "9966",
+      "taxable_amount": 29348.46,
+      "invoice_gst_rate": 28,
+      "expected_gst_rate": 18,
+      "gst_overcharge": 2934.85,
+      "overcharge": 2934.85,
+      "line_index": 0,
+      "invoice_date": "2025-02-22",
+      "invoice_total": 51596.76
+    },
+    {
+      "invoice_id": "INV-0309",
+      "vendor_name": "PixelCraft Studios",
+      "issue_type": "gst_mismatch",
+      "description": "SEO services monthly",
+      "hsn_code": "9984",
+      "taxable_amount": 685655.46,
+      "invoice_gst_rate": 28,
+      "expected_gst_rate": 18,
+      "gst_overcharge": 68565.55,
+      "overcharge": 68565.55,
+      "line_index": 0,
+      "invoice_date": "2025-10-09",
+      "invoice_total": 4311250.02
+    },
+    {
+      "invoice_id": "INV-0331",
+      "vendor_name": "PixelCraft Studios",
+      "issue_type": "gst_mismatch",
+      "description": "Video production",
+      "hsn_code": "9973",
+      "taxable_amount": 774028.08,
+      "invoice_gst_rate": 28,
+      "expected_gst_rate": 18,
+      "gst_overcharge": 77402.81,
+      "overcharge": 77402.81,
+      "line_index": 0,
+      "invoice_date": "2025-07-23",
+      "invoice_total": 4332284.85
+    },
+    {
+      "invoice_id": "INV-0393",
+      "vendor_name": "Sai Pharma Ingredients",
+      "issue_type": "gst_mismatch",
+      "description": "Biotin powder 99%",
+      "hsn_code": "3304",
+      "taxable_amount": 56977.28,
+      "invoice_gst_rate": 28,
+      "expected_gst_rate": 18,
+      "gst_overcharge": 5697.73,
+      "overcharge": 5697.73,
+      "line_index": 0,
+      "invoice_date": "2025-02-23",
+      "invoice_total": 118079.96
+    },
+    {
+      "invoice_id": "INV-0495",
+      "vendor_name": "Ecom Express Services",
+      "issue_type": "gst_mismatch",
+      "description": "RTO charges",
+      "hsn_code": "9966",
+      "taxable_amount": 4876.2,
+      "invoice_gst_rate": 28,
+      "expected_gst_rate": 18,
+      "gst_overcharge": 487.62,
+      "overcharge": 487.62,
+      "line_index": 0,
+      "invoice_date": "2025-01-19",
+      "invoice_total": 10569.61
+    },
+    {
+      "invoice_id": "INV-0055",
+      "vendor_name": "Xpressbees Courier",
+      "issue_type": "mystery_surcharge",
+      "description": "Platform fee",
+      "quantity": 1,
+      "unit_price": 1810.46,
+      "amount": 1810.46,
+      "hsn_code": "9988",
+      "overcharge": 1810.46,
+      "line_index": 3,
+      "invoice_date": "2025-08-01",
+      "invoice_total": 7338.27
+    },
+    {
+      "invoice_id": "INV-0085",
+      "vendor_name": "Sai Pharma Ingredients",
+      "issue_type": "mystery_surcharge",
+      "description": "Handling fee",
+      "quantity": 1,
+      "unit_price": 2280.15,
+      "amount": 2280.15,
+      "hsn_code": "9988",
+      "overcharge": 2280.15,
+      "line_index": 5,
+      "invoice_date": "2025-04-22",
+      "invoice_total": 316788.81
+    },
+    {
+      "invoice_id": "INV-0150",
+      "vendor_name": "PixelCraft Studios",
+      "issue_type": "mystery_surcharge",
+      "description": "Handling fee",
+      "quantity": 1,
+      "unit_price": 2194.2,
+      "amount": 2194.2,
+      "hsn_code": "9988",
+      "overcharge": 2194.2,
+      "line_index": 2,
+      "invoice_date": "2025-05-24",
+      "invoice_total": 4089317.34
+    },
+    {
+      "invoice_id": "INV-0161",
+      "vendor_name": "DigiBoost Media",
+      "issue_type": "mystery_surcharge",
+      "description": "Handling fee",
+      "quantity": 1,
+      "unit_price": 2117.05,
+      "amount": 2117.05,
+      "hsn_code": "9988",
+      "overcharge": 2117.05,
+      "line_index": 2,
+      "invoice_date": "2025-05-02",
+      "invoice_total": 5484669.8
+    },
+    {
+      "invoice_id": "INV-0177",
+      "vendor_name": "Ecom Express Services",
+      "issue_type": "mystery_surcharge",
+      "description": "Documentation fee",
+      "quantity": 1,
+      "unit_price": 1837.23,
+      "amount": 1837.23,
+      "hsn_code": "9988",
+      "overcharge": 1837.23,
+      "line_index": 3,
+      "invoice_date": "2025-02-13",
+      "invoice_total": 27743.48
+    },
+    {
+      "invoice_id": "INV-0205",
+      "vendor_name": "Xpressbees Courier",
+      "issue_type": "mystery_surcharge",
+      "description": "Platform fee",
+      "quantity": 1,
+      "unit_price": 2988.78,
+      "amount": 2988.78,
+      "hsn_code": "9988",
+      "overcharge": 2988.78,
+      "line_index": 3,
+      "invoice_date": "2025-06-23",
+      "invoice_total": 41625.82
+    },
+    {
+      "invoice_id": "INV-0245",
+      "vendor_name": "DigiBoost Media",
+      "issue_type": "mystery_surcharge",
+      "description": "Convenience charge",
+      "quantity": 1,
+      "unit_price": 1821.98,
+      "amount": 1821.98,
+      "hsn_code": "9988",
+      "overcharge": 1821.98,
+      "line_index": 5,
+      "invoice_date": "2025-10-05",
+      "invoice_total": 11315839.96
+    },
+    {
+      "invoice_id": "INV-0259",
+      "vendor_name": "Sri Lakshmi Plastics",
+      "issue_type": "mystery_surcharge",
+      "description": "Convenience charge",
+      "quantity": 1,
+      "unit_price": 676.45,
+      "amount": 676.45,
+      "hsn_code": "9988",
+      "overcharge": 676.45,
+      "line_index": 4,
+      "invoice_date": "2025-07-23",
+      "invoice_total": 36448.65
+    },
+    {
+      "invoice_id": "INV-0295",
+      "vendor_name": "Ecom Express Services",
+      "issue_type": "mystery_surcharge",
+      "description": "Platform fee",
+      "quantity": 1,
+      "unit_price": 1348.65,
+      "amount": 1348.65,
+      "hsn_code": "9988",
+      "overcharge": 1348.65,
+      "line_index": 2,
+      "invoice_date": "2025-11-10",
+      "invoice_total": 13168.62
+    },
+    {
+      "invoice_id": "INV-0363",
+      "vendor_name": "Sai Pharma Ingredients",
+      "issue_type": "mystery_surcharge",
+      "description": "Convenience charge",
+      "quantity": 1,
+      "unit_price": 2035.89,
+      "amount": 2035.89,
+      "hsn_code": "9988",
+      "overcharge": 2035.89,
+      "line_index": 4,
+      "invoice_date": "2025-05-08",
+      "invoice_total": 327141.93
+    },
+    {
+      "invoice_id": "INV-0365",
+      "vendor_name": "Sai Pharma Ingredients",
+      "issue_type": "mystery_surcharge",
+      "description": "Documentation fee",
+      "quantity": 1,
+      "unit_price": 2700.04,
+      "amount": 2700.04,
+      "hsn_code": "9988",
+      "overcharge": 2700.04,
+      "line_index": 5,
+      "invoice_date": "2025-10-15",
+      "invoice_total": 791703.62
+    },
+    {
+      "invoice_id": "INV-0479",
+      "vendor_name": "DigiBoost Media",
+      "issue_type": "mystery_surcharge",
+      "description": "Handling fee",
+      "quantity": 1,
+      "unit_price": 2803.09,
+      "amount": 2803.09,
+      "hsn_code": "9988",
+      "overcharge": 2803.09,
+      "line_index": 3,
+      "invoice_date": "2025-07-24",
+      "invoice_total": 3628395.07
+    },
+    {
+      "invoice_id": "INV-0006",
+      "vendor_name": "Naveen Corrugators",
+      "issue_type": "subtotal_mismatch",
+      "stated_subtotal": 24547.56,
+      "calculated_subtotal": 23321.53,
+      "overcharge": 1226.03,
+      "invoice_date": "2025-12-12",
+      "invoice_total": 28745.44
+    },
+    {
+      "invoice_id": "INV-0096",
+      "vendor_name": "Ecom Express Services",
+      "issue_type": "subtotal_mismatch",
+      "stated_subtotal": 6727.96,
+      "calculated_subtotal": 4288.56,
+      "overcharge": 2439.4,
+      "invoice_date": "2025-05-07",
+      "invoice_total": 7499.9
+    },
+    {
+      "invoice_id": "INV-0176",
+      "vendor_name": "Ecom Express Services",
+      "issue_type": "subtotal_mismatch",
+      "stated_subtotal": 36874.36,
+      "calculated_subtotal": 34179.26,
+      "overcharge": 2695.1,
+      "invoice_date": "2025-10-26",
+      "invoice_total": 43026.63
+    },
+    {
+      "invoice_id": "INV-0269",
+      "vendor_name": "Delhivery Logistics",
+      "issue_type": "subtotal_mismatch",
+      "stated_subtotal": 46599.38,
+      "calculated_subtotal": 43967.62,
+      "overcharge": 2631.76,
+      "invoice_date": "2025-08-28",
+      "invoice_total": 54513.55
+    },
+    {
+      "invoice_id": "INV-0436",
+      "vendor_name": "Ecom Express Services",
+      "issue_type": "subtotal_mismatch",
+      "stated_subtotal": 42211.84,
+      "calculated_subtotal": 39251.73,
+      "overcharge": 2960.11,
+      "invoice_date": "2025-12-02",
+      "invoice_total": 49277.15
+    },
+    {
+      "invoice_id": "INV-0457",
+      "vendor_name": "Delhivery Logistics",
+      "issue_type": "subtotal_mismatch",
+      "stated_subtotal": 41301.11,
+      "calculated_subtotal": 38030.16,
+      "overcharge": 3270.95,
+      "invoice_date": "2025-04-10",
+      "invoice_total": 48146.54
+    },
+    {
+      "invoice_id": "INV-0483",
+      "vendor_name": "Primus Biotech",
+      "issue_type": "subtotal_mismatch",
+      "stated_subtotal": 202433.43,
+      "calculated_subtotal": 199470.43,
+      "overcharge": 2963.0,
+      "invoice_date": "2025-12-20",
+      "invoice_total": 238338.11
+    },
+    {
+      "invoice_id": "INV-0501",
+      "vendor_name": "Naveen Corrugators",
+      "issue_type": "duplicate_invoice",
+      "duplicate_of": "INV-0318",
+      "amount": 20761.72,
+      "overcharge": 20761.72,
+      "invoice_date": "2025-07-05",
+      "invoice_total": 20761.72
+    },
+    {
+      "invoice_id": "INV-0502",
+      "vendor_name": "Brandwise Digital",
+      "issue_type": "duplicate_invoice",
+      "duplicate_of": "INV-0094",
+      "amount": 4802535.31,
+      "overcharge": 4802535.31,
+      "invoice_date": "2025-06-10",
+      "invoice_total": 4802535.31
+    },
+    {
+      "invoice_id": "INV-0503",
+      "vendor_name": "BlueDart Express",
+      "issue_type": "duplicate_invoice",
+      "duplicate_of": "INV-0204",
+      "amount": 30736,
+      "overcharge": 30736,
+      "invoice_date": "2025-09-06",
+      "invoice_total": 30736
+    },
+    {
+      "invoice_id": "INV-0504",
+      "vendor_name": "PixelCraft Studios",
+      "issue_type": "duplicate_invoice",
+      "duplicate_of": "INV-0079",
+      "amount": 3983116.38,
+      "overcharge": 3983116.38,
+      "invoice_date": "2025-10-19",
+      "invoice_total": 3983116.38
+    },
+    {
+      "invoice_id": "INV-0505",
+      "vendor_name": "BlueDart Express",
+      "issue_type": "duplicate_invoice",
+      "duplicate_of": "INV-0349",
+      "amount": 28484.44,
+      "overcharge": 28484.44,
+      "invoice_date": "2025-12-14",
+      "invoice_total": 28484.44
+    },
+    {
+      "invoice_id": "INV-0506",
+      "vendor_name": "Naveen Corrugators",
+      "issue_type": "duplicate_invoice",
+      "duplicate_of": "INV-0325",
+      "amount": 33481.86,
+      "overcharge": 33481.86,
+      "invoice_date": "2025-08-29",
+      "invoice_total": 33481.86
+    },
+    {
+      "invoice_id": "INV-0507",
+      "vendor_name": "Delhivery Logistics",
+      "issue_type": "duplicate_invoice",
+      "duplicate_of": "INV-0394",
+      "amount": 15487.56,
+      "overcharge": 15487.56,
+      "invoice_date": "2025-12-24",
+      "invoice_total": 15487.56
+    },
+    {
+      "invoice_id": "INV-0508",
+      "vendor_name": "PixelCraft Studios",
+      "issue_type": "duplicate_invoice",
+      "duplicate_of": "INV-0138",
+      "amount": 7341431.51,
+      "overcharge": 7341431.51,
+      "invoice_date": "2025-12-23",
+      "invoice_total": 7341431.51
+    }
+  ],
+  "flagged_invoices": [
+    {
+      "invoice_id": "INV-0005",
+      "vendor_name": "Sri Lakshmi Plastics",
+      "vendor_type": "packaging",
+      "invoice_date": "2025-12-13",
+      "subtotal": 43402.76,
+      "gst_amount": 6133.77,
+      "total": 49536.53,
+      "payment_terms": "Net 30",
+      "line_items": [
+        {
+          "description": "Custom printed boxes",
+          "quantity": 71,
+          "unit_price": 190.84,
+          "amount": 14215.77,
+          "gst_rate": 18,
+          "hsn_code": "3923"
+        },
+        {
+          "description": "Custom printed boxes",
+          "quantity": 44,
+          "unit_price": 190.84,
+          "amount": 8396.96,
+          "gst_rate": 12,
+          "hsn_code": "4819"
+        },
+        {
+          "description": "Custom printed boxes",
+          "quantity": 54,
+          "unit_price": 190.84,
+          "amount": 10305.36,
+          "gst_rate": 12,
+          "hsn_code": "4819"
+        },
+        {
+          "description": "Shrink wrap rolls",
+          "quantity": 11,
+          "unit_price": 109.83,
+          "amount": 1208.13,
+          "gst_rate": 18,
+          "hsn_code": "7010"
+        },
+        {
+          "description": "Air pillow packs",
+          "quantity": 78,
+          "unit_price": 118.93,
+          "amount": 9276.54,
+          "gst_rate": 12,
+          "hsn_code": "4819"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0005",
+          "vendor_name": "Sri Lakshmi Plastics",
+          "issue_type": "calculation_error",
+          "description": "Custom printed boxes",
+          "quantity": 71,
+          "unit_price": 190.84,
+          "billed_amount": 14215.77,
+          "expected_amount": 13549.64,
+          "overcharge": 666.13,
+          "line_index": 0,
+          "invoice_date": "2025-12-13",
+          "invoice_total": 49536.53
+        }
+      ],
+      "total_overcharge": 666.13
+    },
+    {
+      "invoice_id": "INV-0009",
+      "vendor_name": "DigiBoost Media",
+      "vendor_type": "marketing",
+      "invoice_date": "2025-02-05",
+      "subtotal": 612553.63,
+      "gst_amount": 110259.65,
+      "total": 722813.28,
+      "payment_terms": "Net 45",
+      "line_items": [
+        {
+          "description": "Influencer campaign fee",
+          "quantity": 4,
+          "unit_price": 20686.59,
+          "amount": 86324.15,
+          "gst_rate": 18,
+          "hsn_code": "9983"
+        },
+        {
+          "description": "Google Ads management",
+          "quantity": 5,
+          "unit_price": 49261.96,
+          "amount": 246309.8,
+          "gst_rate": 18,
+          "hsn_code": "9973"
+        },
+        {
+          "description": "Email campaign setup",
+          "quantity": 8,
+          "unit_price": 34989.96,
+          "amount": 279919.68,
+          "gst_rate": 18,
+          "hsn_code": "9973"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0009",
+          "vendor_name": "DigiBoost Media",
+          "issue_type": "calculation_error",
+          "description": "Influencer campaign fee",
+          "quantity": 4,
+          "unit_price": 20686.59,
+          "billed_amount": 86324.15,
+          "expected_amount": 82746.36,
+          "overcharge": 3577.79,
+          "line_index": 0,
+          "invoice_date": "2025-02-05",
+          "invoice_total": 722813.28
+        }
+      ],
+      "total_overcharge": 3577.79
+    },
+    {
+      "invoice_id": "INV-0039",
+      "vendor_name": "Delhivery Logistics",
+      "vendor_type": "logistics",
+      "invoice_date": "2025-09-27",
+      "subtotal": 28146.79,
+      "gst_amount": 5066.42,
+      "total": 33213.21,
+      "payment_terms": "Net 45",
+      "line_items": [
+        {
+          "description": "Freight charges - Zone B",
+          "quantity": 52,
+          "unit_price": 271.8,
+          "amount": 17550.51,
+          "gst_rate": 18,
+          "hsn_code": "9966"
+        },
+        {
+          "description": "Freight charges - Zone C",
+          "quantity": 8,
+          "unit_price": 373,
+          "amount": 2984,
+          "gst_rate": 18,
+          "hsn_code": "9965"
+        },
+        {
+          "description": "COD handling",
+          "quantity": 52,
+          "unit_price": 146.39,
+          "amount": 7612.28,
+          "gst_rate": 18,
+          "hsn_code": "9965"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0039",
+          "vendor_name": "Delhivery Logistics",
+          "issue_type": "calculation_error",
+          "description": "Freight charges - Zone B",
+          "quantity": 52,
+          "unit_price": 271.8,
+          "billed_amount": 17550.51,
+          "expected_amount": 14133.6,
+          "overcharge": 3416.91,
+          "line_index": 0,
+          "invoice_date": "2025-09-27",
+          "invoice_total": 33213.21
+        }
+      ],
+      "total_overcharge": 3416.91
+    },
+    {
+      "invoice_id": "INV-0063",
+      "vendor_name": "DigiBoost Media",
+      "vendor_type": "marketing",
+      "invoice_date": "2025-04-22",
+      "subtotal": 1545226.69,
+      "gst_amount": 278140.8,
+      "total": 1823367.49,
+      "payment_terms": "Net 60",
+      "line_items": [
+        {
+          "description": "Influencer campaign fee",
+          "quantity": 65,
+          "unit_price": 20686.59,
+          "amount": 1347353.19,
+          "gst_rate": 18,
+          "hsn_code": "9984"
+        },
+        {
+          "description": "Creative production",
+          "quantity": 5,
+          "unit_price": 39574.7,
+          "amount": 197873.5,
+          "gst_rate": 18,
+          "hsn_code": "9983"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0063",
+          "vendor_name": "DigiBoost Media",
+          "issue_type": "calculation_error",
+          "description": "Influencer campaign fee",
+          "quantity": 65,
+          "unit_price": 20686.59,
+          "billed_amount": 1347353.19,
+          "expected_amount": 1344628.35,
+          "overcharge": 2724.84,
+          "line_index": 0,
+          "invoice_date": "2025-04-22",
+          "invoice_total": 1823367.49
+        }
+      ],
+      "total_overcharge": 2724.84
+    },
+    {
+      "invoice_id": "INV-0065",
+      "vendor_name": "Primus Biotech",
+      "vendor_type": "raw_material",
+      "invoice_date": "2025-09-10",
+      "subtotal": 333597.03,
+      "gst_amount": 48083.81,
+      "total": 381680.84,
+      "payment_terms": "Net 45",
+      "line_items": [
+        {
+          "description": "Hyaluronic acid",
+          "quantity": 23,
+          "unit_price": 667.81,
+          "amount": 18850.3,
+          "gst_rate": 18,
+          "hsn_code": "3305"
+        },
+        {
+          "description": "Collagen peptides",
+          "quantity": 49,
+          "unit_price": 4069.27,
+          "amount": 199394.23,
+          "gst_rate": 12,
+          "hsn_code": "3003"
+        },
+        {
+          "description": "Minoxidil solution 5%",
+          "quantity": 50,
+          "unit_price": 2307.05,
+          "amount": 115352.5,
+          "gst_rate": 18,
+          "hsn_code": "2106"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0065",
+          "vendor_name": "Primus Biotech",
+          "issue_type": "calculation_error",
+          "description": "Hyaluronic acid",
+          "quantity": 23,
+          "unit_price": 667.81,
+          "billed_amount": 18850.3,
+          "expected_amount": 15359.63,
+          "overcharge": 3490.67,
+          "line_index": 0,
+          "invoice_date": "2025-09-10",
+          "invoice_total": 381680.84
+        }
+      ],
+      "total_overcharge": 3490.67
+    },
+    {
+      "invoice_id": "INV-0122",
+      "vendor_name": "Brandwise Digital",
+      "vendor_type": "marketing",
+      "invoice_date": "2025-12-05",
+      "subtotal": 6812511.72,
+      "gst_amount": 1226252.11,
+      "total": 8038763.83,
+      "payment_terms": "Net 60",
+      "line_items": [
+        {
+          "description": "SEO services monthly",
+          "quantity": 19,
+          "unit_price": 28905.15,
+          "amount": 551199.34,
+          "gst_rate": 18,
+          "hsn_code": "9983"
+        },
+        {
+          "description": "Video production",
+          "quantity": 6,
+          "unit_price": 20455.11,
+          "amount": 122730.66,
+          "gst_rate": 18,
+          "hsn_code": "9983"
+        },
+        {
+          "description": "Creative production",
+          "quantity": 62,
+          "unit_price": 42204.67,
+          "amount": 2616689.54,
+          "gst_rate": 18,
+          "hsn_code": "9983"
+        },
+        {
+          "description": "Creative production",
+          "quantity": 66,
+          "unit_price": 42204.67,
+          "amount": 2785508.22,
+          "gst_rate": 18,
+          "hsn_code": "9973"
+        },
+        {
+          "description": "Video production",
+          "quantity": 36,
+          "unit_price": 20455.11,
+          "amount": 736383.96,
+          "gst_rate": 18,
+          "hsn_code": "9973"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0122",
+          "vendor_name": "Brandwise Digital",
+          "issue_type": "calculation_error",
+          "description": "SEO services monthly",
+          "quantity": 19,
+          "unit_price": 28905.15,
+          "billed_amount": 551199.34,
+          "expected_amount": 549197.85,
+          "overcharge": 2001.49,
+          "line_index": 0,
+          "invoice_date": "2025-12-05",
+          "invoice_total": 8038763.83
+        }
+      ],
+      "total_overcharge": 2001.49
+    },
+    {
+      "invoice_id": "INV-0147",
+      "vendor_name": "Herb Valley Extracts",
+      "vendor_type": "raw_material",
+      "invoice_date": "2025-09-24",
+      "subtotal": 157161.92,
+      "gst_amount": 18859.43,
+      "total": 176021.35,
+      "payment_terms": "Net 45",
+      "line_items": [
+        {
+          "description": "Minoxidil solution 5%",
+          "quantity": 35,
+          "unit_price": 843.06,
+          "amount": 30188.6,
+          "gst_rate": 12,
+          "hsn_code": "3004"
+        },
+        {
+          "description": "Hyaluronic acid",
+          "quantity": 47,
+          "unit_price": 2701.56,
+          "amount": 126973.32,
+          "gst_rate": 12,
+          "hsn_code": "3004"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0147",
+          "vendor_name": "Herb Valley Extracts",
+          "issue_type": "calculation_error",
+          "description": "Minoxidil solution 5%",
+          "quantity": 35,
+          "unit_price": 843.06,
+          "billed_amount": 30188.6,
+          "expected_amount": 29507.1,
+          "overcharge": 681.5,
+          "line_index": 0,
+          "invoice_date": "2025-09-24",
+          "invoice_total": 176021.35
+        }
+      ],
+      "total_overcharge": 681.5
+    },
+    {
+      "invoice_id": "INV-0183",
+      "vendor_name": "Xpressbees Courier",
+      "vendor_type": "logistics",
+      "invoice_date": "2025-10-21",
+      "subtotal": 16200.21,
+      "gst_amount": 2916.04,
+      "total": 19116.25,
+      "payment_terms": "Net 45",
+      "line_items": [
+        {
+          "description": "RTO charges",
+          "quantity": 19,
+          "unit_price": 82.88,
+          "amount": 6166.29,
+          "gst_rate": 18,
+          "hsn_code": "9966"
+        },
+        {
+          "description": "COD handling",
+          "quantity": 36,
+          "unit_price": 278.72,
+          "amount": 10033.92,
+          "gst_rate": 18,
+          "hsn_code": "9966"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0183",
+          "vendor_name": "Xpressbees Courier",
+          "issue_type": "calculation_error",
+          "description": "RTO charges",
+          "quantity": 19,
+          "unit_price": 82.88,
+          "billed_amount": 6166.29,
+          "expected_amount": 1574.72,
+          "overcharge": 4591.57,
+          "line_index": 0,
+          "invoice_date": "2025-10-21",
+          "invoice_total": 19116.25
+        }
+      ],
+      "total_overcharge": 4591.57
+    },
+    {
+      "invoice_id": "INV-0195",
+      "vendor_name": "Primus Biotech",
+      "vendor_type": "raw_material",
+      "invoice_date": "2025-11-08",
+      "subtotal": 140883.23,
+      "gst_amount": 17102.53,
+      "total": 157985.76,
+      "payment_terms": "Net 45",
+      "line_items": [
+        {
+          "description": "Minoxidil solution 5%",
+          "quantity": 1,
+          "unit_price": 2307.05,
+          "amount": 3275.63,
+          "gst_rate": 18,
+          "hsn_code": "3304"
+        },
+        {
+          "description": "Biotin powder 99%",
+          "quantity": 65,
+          "unit_price": 2117.04,
+          "amount": 137607.6,
+          "gst_rate": 12,
+          "hsn_code": "3004"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0195",
+          "vendor_name": "Primus Biotech",
+          "issue_type": "calculation_error",
+          "description": "Minoxidil solution 5%",
+          "quantity": 1,
+          "unit_price": 2307.05,
+          "billed_amount": 3275.63,
+          "expected_amount": 2307.05,
+          "overcharge": 968.58,
+          "line_index": 0,
+          "invoice_date": "2025-11-08",
+          "invoice_total": 157985.76
+        }
+      ],
+      "total_overcharge": 968.58
+    },
+    {
+      "invoice_id": "INV-0196",
+      "vendor_name": "Sai Pharma Ingredients",
+      "vendor_type": "raw_material",
+      "invoice_date": "2025-03-26",
+      "subtotal": 597711.91,
+      "gst_amount": 103144.4,
+      "total": 700856.31,
+      "payment_terms": "Net 45",
+      "line_items": [
+        {
+          "description": "Zinc gluconate",
+          "quantity": 14,
+          "unit_price": 4935.33,
+          "amount": 74062.47,
+          "gst_rate": 12,
+          "hsn_code": "3004"
+        },
+        {
+          "description": "Hyaluronic acid",
+          "quantity": 72,
+          "unit_price": 4967.85,
+          "amount": 357685.2,
+          "gst_rate": 18,
+          "hsn_code": "2106"
+        },
+        {
+          "description": "Ashwagandha KSM-66",
+          "quantity": 60,
+          "unit_price": 510.72,
+          "amount": 30643.2,
+          "gst_rate": 18,
+          "hsn_code": "3304"
+        },
+        {
+          "description": "Biotin powder 99%",
+          "quantity": 58,
+          "unit_price": 1780.54,
+          "amount": 103271.32,
+          "gst_rate": 18,
+          "hsn_code": "2106"
+        },
+        {
+          "description": "Biotin powder 99%",
+          "quantity": 18,
+          "unit_price": 1780.54,
+          "amount": 32049.72,
+          "gst_rate": 18,
+          "hsn_code": "2106"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0196",
+          "vendor_name": "Sai Pharma Ingredients",
+          "issue_type": "calculation_error",
+          "description": "Zinc gluconate",
+          "quantity": 14,
+          "unit_price": 4935.33,
+          "billed_amount": 74062.47,
+          "expected_amount": 69094.62,
+          "overcharge": 4967.85,
+          "line_index": 0,
+          "invoice_date": "2025-03-26",
+          "invoice_total": 700856.31
+        }
+      ],
+      "total_overcharge": 4967.85
+    },
+    {
+      "invoice_id": "INV-0201",
+      "vendor_name": "Ashok Packaging Pvt Ltd",
+      "vendor_type": "packaging",
+      "invoice_date": "2025-01-08",
+      "subtotal": 31143.46,
+      "gst_amount": 5605.82,
+      "total": 36749.28,
+      "payment_terms": "Net 45",
+      "line_items": [
+        {
+          "description": "Tape rolls pack of 6",
+          "quantity": 24,
+          "unit_price": 77.71,
+          "amount": 2840.26,
+          "gst_rate": 18,
+          "hsn_code": "7010"
+        },
+        {
+          "description": "Mailer bags 10x12",
+          "quantity": 65,
+          "unit_price": 275.48,
+          "amount": 17906.2,
+          "gst_rate": 18,
+          "hsn_code": "3923"
+        },
+        {
+          "description": "Bubble wrap roll 50m",
+          "quantity": 74,
+          "unit_price": 140.5,
+          "amount": 10397,
+          "gst_rate": 18,
+          "hsn_code": "3923"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0201",
+          "vendor_name": "Ashok Packaging Pvt Ltd",
+          "issue_type": "calculation_error",
+          "description": "Tape rolls pack of 6",
+          "quantity": 24,
+          "unit_price": 77.71,
+          "billed_amount": 2840.26,
+          "expected_amount": 1865.04,
+          "overcharge": 975.22,
+          "line_index": 0,
+          "invoice_date": "2025-01-08",
+          "invoice_total": 36749.28
+        }
+      ],
+      "total_overcharge": 975.22
+    },
+    {
+      "invoice_id": "INV-0206",
+      "vendor_name": "Ashok Packaging Pvt Ltd",
+      "vendor_type": "packaging",
+      "invoice_date": "2025-01-02",
+      "subtotal": 25035.12,
+      "gst_amount": 3720.25,
+      "total": 28755.37,
+      "payment_terms": "Net 30",
+      "line_items": [
+        {
+          "description": "Corrugated boxes 7x5x3",
+          "quantity": 68,
+          "unit_price": 146.87,
+          "amount": 13101.24,
+          "gst_rate": 12,
+          "hsn_code": "4819"
+        },
+        {
+          "description": "Tape rolls pack of 6",
+          "quantity": 67,
+          "unit_price": 77.71,
+          "amount": 5206.57,
+          "gst_rate": 18,
+          "hsn_code": "7010"
+        },
+        {
+          "description": "Corrugated boxes 7x5x3",
+          "quantity": 12,
+          "unit_price": 146.87,
+          "amount": 1762.44,
+          "gst_rate": 18,
+          "hsn_code": "3923"
+        },
+        {
+          "description": "Corrugated boxes 7x5x3",
+          "quantity": 29,
+          "unit_price": 146.87,
+          "amount": 4259.23,
+          "gst_rate": 18,
+          "hsn_code": "7010"
+        },
+        {
+          "description": "Custom printed boxes",
+          "quantity": 52,
+          "unit_price": 13.57,
+          "amount": 705.64,
+          "gst_rate": 18,
+          "hsn_code": "7010"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0206",
+          "vendor_name": "Ashok Packaging Pvt Ltd",
+          "issue_type": "calculation_error",
+          "description": "Corrugated boxes 7x5x3",
+          "quantity": 68,
+          "unit_price": 146.87,
+          "billed_amount": 13101.24,
+          "expected_amount": 9987.16,
+          "overcharge": 3114.08,
+          "line_index": 0,
+          "invoice_date": "2025-01-02",
+          "invoice_total": 28755.37
+        }
+      ],
+      "total_overcharge": 3114.08
+    },
+    {
+      "invoice_id": "INV-0215",
+      "vendor_name": "Herb Valley Extracts",
+      "vendor_type": "raw_material",
+      "invoice_date": "2025-12-13",
+      "subtotal": 207955.32,
+      "gst_amount": 27460.36,
+      "total": 235415.68,
+      "payment_terms": "Net 30",
+      "line_items": [
+        {
+          "description": "Collagen peptides",
+          "quantity": 39,
+          "unit_price": 2632.28,
+          "amount": 106677.7,
+          "gst_rate": 18,
+          "hsn_code": "2106"
+        },
+        {
+          "description": "Minoxidil solution 5%",
+          "quantity": 66,
+          "unit_price": 843.06,
+          "amount": 55641.96,
+          "gst_rate": 5,
+          "hsn_code": "2936"
+        },
+        {
+          "description": "Ashwagandha KSM-66",
+          "quantity": 14,
+          "unit_price": 3259.69,
+          "amount": 45635.66,
+          "gst_rate": 12,
+          "hsn_code": "3004"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0215",
+          "vendor_name": "Herb Valley Extracts",
+          "issue_type": "calculation_error",
+          "description": "Collagen peptides",
+          "quantity": 39,
+          "unit_price": 2632.28,
+          "billed_amount": 106677.7,
+          "expected_amount": 102658.92,
+          "overcharge": 4018.78,
+          "line_index": 0,
+          "invoice_date": "2025-12-13",
+          "invoice_total": 235415.68
+        }
+      ],
+      "total_overcharge": 4018.78
+    },
+    {
+      "invoice_id": "INV-0224",
+      "vendor_name": "Primus Biotech",
+      "vendor_type": "raw_material",
+      "invoice_date": "2025-05-28",
+      "subtotal": 209903.16,
+      "gst_amount": 34808.23,
+      "total": 244711.39,
+      "payment_terms": "Net 30",
+      "line_items": [
+        {
+          "description": "Biotin powder 99%",
+          "quantity": 62,
+          "unit_price": 2117.04,
+          "amount": 135915.23,
+          "gst_rate": 18,
+          "hsn_code": "3305"
+        },
+        {
+          "description": "Zinc gluconate",
+          "quantity": 47,
+          "unit_price": 1054.73,
+          "amount": 49572.31,
+          "gst_rate": 12,
+          "hsn_code": "3003"
+        },
+        {
+          "description": "Collagen peptides",
+          "quantity": 6,
+          "unit_price": 4069.27,
+          "amount": 24415.62,
+          "gst_rate": 18,
+          "hsn_code": "3304"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0224",
+          "vendor_name": "Primus Biotech",
+          "issue_type": "calculation_error",
+          "description": "Biotin powder 99%",
+          "quantity": 62,
+          "unit_price": 2117.04,
+          "billed_amount": 135915.23,
+          "expected_amount": 131256.48,
+          "overcharge": 4658.75,
+          "line_index": 0,
+          "invoice_date": "2025-05-28",
+          "invoice_total": 244711.39
+        }
+      ],
+      "total_overcharge": 4658.75
+    },
+    {
+      "invoice_id": "INV-0239",
+      "vendor_name": "PixelCraft Studios",
+      "vendor_type": "marketing",
+      "invoice_date": "2025-02-08",
+      "subtotal": 2892314.18,
+      "gst_amount": 520616.55,
+      "total": 3412930.73,
+      "payment_terms": "Net 30",
+      "line_items": [
+        {
+          "description": "Video production",
+          "quantity": 55,
+          "unit_price": 40738.32,
+          "amount": 2241597.18,
+          "gst_rate": 18,
+          "hsn_code": "9984"
+        },
+        {
+          "description": "Creative production",
+          "quantity": 25,
+          "unit_price": 26028.68,
+          "amount": 650717,
+          "gst_rate": 18,
+          "hsn_code": "9983"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0239",
+          "vendor_name": "PixelCraft Studios",
+          "issue_type": "calculation_error",
+          "description": "Video production",
+          "quantity": 55,
+          "unit_price": 40738.32,
+          "billed_amount": 2241597.18,
+          "expected_amount": 2240607.6,
+          "overcharge": 989.58,
+          "line_index": 0,
+          "invoice_date": "2025-02-08",
+          "invoice_total": 3412930.73
+        }
+      ],
+      "total_overcharge": 989.58
+    },
+    {
+      "invoice_id": "INV-0267",
+      "vendor_name": "Herb Valley Extracts",
+      "vendor_type": "raw_material",
+      "invoice_date": "2025-07-11",
+      "subtotal": 563089.53,
+      "gst_amount": 79443.66,
+      "total": 642533.19,
+      "payment_terms": "Net 45",
+      "line_items": [
+        {
+          "description": "Zinc gluconate",
+          "quantity": 29,
+          "unit_price": 2025.6,
+          "amount": 61002.91,
+          "gst_rate": 18,
+          "hsn_code": "3305"
+        },
+        {
+          "description": "Ashwagandha KSM-66",
+          "quantity": 38,
+          "unit_price": 3259.69,
+          "amount": 123868.22,
+          "gst_rate": 12,
+          "hsn_code": "3003"
+        },
+        {
+          "description": "Hyaluronic acid",
+          "quantity": 72,
+          "unit_price": 2701.56,
+          "amount": 194512.32,
+          "gst_rate": 12,
+          "hsn_code": "3003"
+        },
+        {
+          "description": "Hyaluronic acid",
+          "quantity": 60,
+          "unit_price": 2701.56,
+          "amount": 162093.6,
+          "gst_rate": 18,
+          "hsn_code": "2106"
+        },
+        {
+          "description": "Hyaluronic acid",
+          "quantity": 8,
+          "unit_price": 2701.56,
+          "amount": 21612.48,
+          "gst_rate": 5,
+          "hsn_code": "2936"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0267",
+          "vendor_name": "Herb Valley Extracts",
+          "issue_type": "calculation_error",
+          "description": "Zinc gluconate",
+          "quantity": 29,
+          "unit_price": 2025.6,
+          "billed_amount": 61002.91,
+          "expected_amount": 58742.4,
+          "overcharge": 2260.51,
+          "line_index": 0,
+          "invoice_date": "2025-07-11",
+          "invoice_total": 642533.19
+        }
+      ],
+      "total_overcharge": 2260.51
+    },
+    {
+      "invoice_id": "INV-0299",
+      "vendor_name": "BlueDart Express",
+      "vendor_type": "logistics",
+      "invoice_date": "2025-12-22",
+      "subtotal": 25217.62,
+      "gst_amount": 4539.17,
+      "total": 29756.79,
+      "payment_terms": "Net 30",
+      "line_items": [
+        {
+          "description": "Surface transport",
+          "quantity": 54,
+          "unit_price": 236.97,
+          "amount": 14024.27,
+          "gst_rate": 18,
+          "hsn_code": "9965"
+        },
+        {
+          "description": "RTO charges",
+          "quantity": 2,
+          "unit_price": 411.43,
+          "amount": 822.86,
+          "gst_rate": 18,
+          "hsn_code": "9966"
+        },
+        {
+          "description": "Freight charges - Zone A",
+          "quantity": 39,
+          "unit_price": 265.91,
+          "amount": 10370.49,
+          "gst_rate": 18,
+          "hsn_code": "9965"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0299",
+          "vendor_name": "BlueDart Express",
+          "issue_type": "calculation_error",
+          "description": "Surface transport",
+          "quantity": 54,
+          "unit_price": 236.97,
+          "billed_amount": 14024.27,
+          "expected_amount": 12796.38,
+          "overcharge": 1227.89,
+          "line_index": 0,
+          "invoice_date": "2025-12-22",
+          "invoice_total": 29756.79
+        }
+      ],
+      "total_overcharge": 1227.89
+    },
+    {
+      "invoice_id": "INV-0351",
+      "vendor_name": "Xpressbees Courier",
+      "vendor_type": "logistics",
+      "invoice_date": "2025-07-24",
+      "subtotal": 90500.3,
+      "gst_amount": 16290.05,
+      "total": 106790.35,
+      "payment_terms": "Net 60",
+      "line_items": [
+        {
+          "description": "Surface transport",
+          "quantity": 19,
+          "unit_price": 243.01,
+          "amount": 6473.39,
+          "gst_rate": 18,
+          "hsn_code": "9965"
+        },
+        {
+          "description": "Freight charges - Zone B",
+          "quantity": 54,
+          "unit_price": 373.77,
+          "amount": 20183.58,
+          "gst_rate": 18,
+          "hsn_code": "9965"
+        },
+        {
+          "description": "Freight charges - Zone A",
+          "quantity": 45,
+          "unit_price": 425.34,
+          "amount": 19140.3,
+          "gst_rate": 18,
+          "hsn_code": "9965"
+        },
+        {
+          "description": "Fuel surcharge",
+          "quantity": 26,
+          "unit_price": 434.01,
+          "amount": 11284.26,
+          "gst_rate": 18,
+          "hsn_code": "9966"
+        },
+        {
+          "description": "Fuel surcharge",
+          "quantity": 77,
+          "unit_price": 434.01,
+          "amount": 33418.77,
+          "gst_rate": 18,
+          "hsn_code": "9966"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0351",
+          "vendor_name": "Xpressbees Courier",
+          "issue_type": "calculation_error",
+          "description": "Surface transport",
+          "quantity": 19,
+          "unit_price": 243.01,
+          "billed_amount": 6473.39,
+          "expected_amount": 4617.19,
+          "overcharge": 1856.2,
+          "line_index": 0,
+          "invoice_date": "2025-07-24",
+          "invoice_total": 106790.35
+        }
+      ],
+      "total_overcharge": 1856.2
+    },
+    {
+      "invoice_id": "INV-0356",
+      "vendor_name": "CloudNine Ads",
+      "vendor_type": "marketing",
+      "invoice_date": "2025-07-25",
+      "subtotal": 2225883.97,
+      "gst_amount": 400659.11,
+      "total": 2626543.08,
+      "payment_terms": "Net 30",
+      "line_items": [
+        {
+          "description": "Video production",
+          "quantity": 35,
+          "unit_price": 25530.76,
+          "amount": 898573.03,
+          "gst_rate": 18,
+          "hsn_code": "9983"
+        },
+        {
+          "description": "SEO services monthly",
+          "quantity": 18,
+          "unit_price": 7831.38,
+          "amount": 140964.84,
+          "gst_rate": 18,
+          "hsn_code": "9973"
+        },
+        {
+          "description": "SEO services monthly",
+          "quantity": 41,
+          "unit_price": 7831.38,
+          "amount": 321086.58,
+          "gst_rate": 18,
+          "hsn_code": "9984"
+        },
+        {
+          "description": "Email campaign setup",
+          "quantity": 32,
+          "unit_price": 27039.36,
+          "amount": 865259.52,
+          "gst_rate": 18,
+          "hsn_code": "9973"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0356",
+          "vendor_name": "CloudNine Ads",
+          "issue_type": "calculation_error",
+          "description": "Video production",
+          "quantity": 35,
+          "unit_price": 25530.76,
+          "billed_amount": 898573.03,
+          "expected_amount": 893576.6,
+          "overcharge": 4996.43,
+          "line_index": 0,
+          "invoice_date": "2025-07-25",
+          "invoice_total": 2626543.08
+        }
+      ],
+      "total_overcharge": 4996.43
+    },
+    {
+      "invoice_id": "INV-0407",
+      "vendor_name": "Sri Lakshmi Plastics",
+      "vendor_type": "packaging",
+      "invoice_date": "2025-02-24",
+      "subtotal": 27075.58,
+      "gst_amount": 3406.06,
+      "total": 30481.64,
+      "payment_terms": "Net 30",
+      "line_items": [
+        {
+          "description": "Shrink wrap rolls",
+          "quantity": 51,
+          "unit_price": 109.83,
+          "amount": 8282.6,
+          "gst_rate": 12,
+          "hsn_code": "4819"
+        },
+        {
+          "description": "Air pillow packs",
+          "quantity": 22,
+          "unit_price": 118.93,
+          "amount": 2616.46,
+          "gst_rate": 18,
+          "hsn_code": "7010"
+        },
+        {
+          "description": "Corrugated boxes 7x5x3",
+          "quantity": 68,
+          "unit_price": 237.89,
+          "amount": 16176.52,
+          "gst_rate": 12,
+          "hsn_code": "4819"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0407",
+          "vendor_name": "Sri Lakshmi Plastics",
+          "issue_type": "calculation_error",
+          "description": "Shrink wrap rolls",
+          "quantity": 51,
+          "unit_price": 109.83,
+          "billed_amount": 8282.6,
+          "expected_amount": 5601.33,
+          "overcharge": 2681.27,
+          "line_index": 0,
+          "invoice_date": "2025-02-24",
+          "invoice_total": 30481.64
+        }
+      ],
+      "total_overcharge": 2681.27
+    },
+    {
+      "invoice_id": "INV-0411",
+      "vendor_name": "PixelCraft Studios",
+      "vendor_type": "marketing",
+      "invoice_date": "2025-04-18",
+      "subtotal": 5302439.76,
+      "gst_amount": 954439.16,
+      "total": 6256878.92,
+      "payment_terms": "Net 30",
+      "line_items": [
+        {
+          "description": "Email campaign setup",
+          "quantity": 50,
+          "unit_price": 19401.48,
+          "amount": 970883.41,
+          "gst_rate": 18,
+          "hsn_code": "9973"
+        },
+        {
+          "description": "SEO services monthly",
+          "quantity": 41,
+          "unit_price": 48975.39,
+          "amount": 2007990.99,
+          "gst_rate": 18,
+          "hsn_code": "9984"
+        },
+        {
+          "description": "Email campaign setup",
+          "quantity": 50,
+          "unit_price": 19401.48,
+          "amount": 970074,
+          "gst_rate": 18,
+          "hsn_code": "9973"
+        },
+        {
+          "description": "Creative production",
+          "quantity": 52,
+          "unit_price": 26028.68,
+          "amount": 1353491.36,
+          "gst_rate": 18,
+          "hsn_code": "9984"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0411",
+          "vendor_name": "PixelCraft Studios",
+          "issue_type": "calculation_error",
+          "description": "Email campaign setup",
+          "quantity": 50,
+          "unit_price": 19401.48,
+          "billed_amount": 970883.41,
+          "expected_amount": 970074.0,
+          "overcharge": 809.41,
+          "line_index": 0,
+          "invoice_date": "2025-04-18",
+          "invoice_total": 6256878.92
+        }
+      ],
+      "total_overcharge": 809.41
+    },
+    {
+      "invoice_id": "INV-0468",
+      "vendor_name": "Primus Biotech",
+      "vendor_type": "raw_material",
+      "invoice_date": "2025-04-01",
+      "subtotal": 293620.27,
+      "gst_amount": 50207.12,
+      "total": 343827.39,
+      "payment_terms": "Net 60",
+      "line_items": [
+        {
+          "description": "Collagen peptides",
+          "quantity": 17,
+          "unit_price": 4069.27,
+          "amount": 73985.46,
+          "gst_rate": 18,
+          "hsn_code": "2106"
+        },
+        {
+          "description": "Ashwagandha KSM-66",
+          "quantity": 28,
+          "unit_price": 3785.7,
+          "amount": 105999.6,
+          "gst_rate": 18,
+          "hsn_code": "3305"
+        },
+        {
+          "description": "Hyaluronic acid",
+          "quantity": 66,
+          "unit_price": 667.81,
+          "amount": 44075.46,
+          "gst_rate": 12,
+          "hsn_code": "3003"
+        },
+        {
+          "description": "Melatonin powder",
+          "quantity": 17,
+          "unit_price": 4091.75,
+          "amount": 69559.75,
+          "gst_rate": 18,
+          "hsn_code": "2106"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0468",
+          "vendor_name": "Primus Biotech",
+          "issue_type": "calculation_error",
+          "description": "Collagen peptides",
+          "quantity": 17,
+          "unit_price": 4069.27,
+          "billed_amount": 73985.46,
+          "expected_amount": 69177.59,
+          "overcharge": 4807.87,
+          "line_index": 0,
+          "invoice_date": "2025-04-01",
+          "invoice_total": 343827.39
+        }
+      ],
+      "total_overcharge": 4807.87
+    },
+    {
+      "invoice_id": "INV-0469",
+      "vendor_name": "Brandwise Digital",
+      "vendor_type": "marketing",
+      "invoice_date": "2025-03-01",
+      "subtotal": 4376393.07,
+      "gst_amount": 787750.75,
+      "total": 5164143.82,
+      "payment_terms": "Net 30",
+      "line_items": [
+        {
+          "description": "Creative production",
+          "quantity": 73,
+          "unit_price": 42204.67,
+          "amount": 3082639.17,
+          "gst_rate": 18,
+          "hsn_code": "9983"
+        },
+        {
+          "description": "Influencer campaign fee",
+          "quantity": 43,
+          "unit_price": 30087.3,
+          "amount": 1293753.9,
+          "gst_rate": 18,
+          "hsn_code": "9984"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0469",
+          "vendor_name": "Brandwise Digital",
+          "issue_type": "calculation_error",
+          "description": "Creative production",
+          "quantity": 73,
+          "unit_price": 42204.67,
+          "billed_amount": 3082639.17,
+          "expected_amount": 3080940.91,
+          "overcharge": 1698.26,
+          "line_index": 0,
+          "invoice_date": "2025-03-01",
+          "invoice_total": 5164143.82
+        }
+      ],
+      "total_overcharge": 1698.26
+    },
+    {
+      "invoice_id": "INV-0064",
+      "vendor_name": "DigiBoost Media",
+      "vendor_type": "marketing",
+      "invoice_date": "2025-12-15",
+      "subtotal": 5719585.28,
+      "gst_amount": 1156579.55,
+      "total": 6876164.83,
+      "payment_terms": "Net 30",
+      "line_items": [
+        {
+          "description": "SEO services monthly",
+          "quantity": 75,
+          "unit_price": 16940.56,
+          "amount": 1270542,
+          "gst_rate": 28,
+          "hsn_code": "9973"
+        },
+        {
+          "description": "Creative production",
+          "quantity": 34,
+          "unit_price": 39574.7,
+          "amount": 1345539.8,
+          "gst_rate": 18,
+          "hsn_code": "9984"
+        },
+        {
+          "description": "Google Ads management",
+          "quantity": 63,
+          "unit_price": 49261.96,
+          "amount": 3103503.48,
+          "gst_rate": 18,
+          "hsn_code": "9984"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0064",
+          "vendor_name": "DigiBoost Media",
+          "issue_type": "gst_mismatch",
+          "description": "SEO services monthly",
+          "hsn_code": "9973",
+          "taxable_amount": 1270542,
+          "invoice_gst_rate": 28,
+          "expected_gst_rate": 18,
+          "gst_overcharge": 127054.2,
+          "overcharge": 127054.2,
+          "line_index": 0,
+          "invoice_date": "2025-12-15",
+          "invoice_total": 6876164.83
+        }
+      ],
+      "total_overcharge": 127054.2
+    },
+    {
+      "invoice_id": "INV-0099",
+      "vendor_name": "Brandwise Digital",
+      "vendor_type": "marketing",
+      "invoice_date": "2025-09-25",
+      "subtotal": 6477312.59,
+      "gst_amount": 1419480.48,
+      "total": 7896793.07,
+      "payment_terms": "Net 60",
+      "line_items": [
+        {
+          "description": "Google Ads management",
+          "quantity": 66,
+          "unit_price": 38418.82,
+          "amount": 2535642.12,
+          "gst_rate": 28,
+          "hsn_code": "9973"
+        },
+        {
+          "description": "Creative production",
+          "quantity": 11,
+          "unit_price": 42204.67,
+          "amount": 464251.37,
+          "gst_rate": 18,
+          "hsn_code": "9973"
+        },
+        {
+          "description": "SEO services monthly",
+          "quantity": 57,
+          "unit_price": 28905.15,
+          "amount": 1647593.55,
+          "gst_rate": 18,
+          "hsn_code": "9973"
+        },
+        {
+          "description": "Video production",
+          "quantity": 25,
+          "unit_price": 20455.11,
+          "amount": 511377.75,
+          "gst_rate": 18,
+          "hsn_code": "9973"
+        },
+        {
+          "description": "Meta ad spend",
+          "quantity": 30,
+          "unit_price": 43948.26,
+          "amount": 1318447.8,
+          "gst_rate": 18,
+          "hsn_code": "9984"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0099",
+          "vendor_name": "Brandwise Digital",
+          "issue_type": "gst_mismatch",
+          "description": "Google Ads management",
+          "hsn_code": "9973",
+          "taxable_amount": 2535642.12,
+          "invoice_gst_rate": 28,
+          "expected_gst_rate": 18,
+          "gst_overcharge": 253564.21,
+          "overcharge": 253564.21,
+          "line_index": 0,
+          "invoice_date": "2025-09-25",
+          "invoice_total": 7896793.07
+        }
+      ],
+      "total_overcharge": 253564.21
+    },
+    {
+      "invoice_id": "INV-0103",
+      "vendor_name": "DigiBoost Media",
+      "vendor_type": "marketing",
+      "invoice_date": "2025-11-14",
+      "subtotal": 1213757.48,
+      "gst_amount": 268701.74,
+      "total": 1482459.22,
+      "payment_terms": "Net 30",
+      "line_items": [
+        {
+          "description": "Meta ad spend",
+          "quantity": 52,
+          "unit_price": 9658.73,
+          "amount": 502253.96,
+          "gst_rate": 28,
+          "hsn_code": "9973"
+        },
+        {
+          "description": "SEO services monthly",
+          "quantity": 42,
+          "unit_price": 16940.56,
+          "amount": 711503.52,
+          "gst_rate": 18,
+          "hsn_code": "9983"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0103",
+          "vendor_name": "DigiBoost Media",
+          "issue_type": "gst_mismatch",
+          "description": "Meta ad spend",
+          "hsn_code": "9973",
+          "taxable_amount": 502253.96,
+          "invoice_gst_rate": 28,
+          "expected_gst_rate": 18,
+          "gst_overcharge": 50225.4,
+          "overcharge": 50225.4,
+          "line_index": 0,
+          "invoice_date": "2025-11-14",
+          "invoice_total": 1482459.22
+        }
+      ],
+      "total_overcharge": 50225.4
+    },
+    {
+      "invoice_id": "INV-0112",
+      "vendor_name": "Ashok Packaging Pvt Ltd",
+      "vendor_type": "packaging",
+      "invoice_date": "2025-03-24",
+      "subtotal": 2875.37,
+      "gst_amount": 603.06,
+      "total": 3478.43,
+      "payment_terms": "Net 30",
+      "line_items": [
+        {
+          "description": "Custom printed boxes",
+          "quantity": 63,
+          "unit_price": 13.57,
+          "amount": 854.91,
+          "gst_rate": 28,
+          "hsn_code": "7010"
+        },
+        {
+          "description": "Tape rolls pack of 6",
+          "quantity": 26,
+          "unit_price": 77.71,
+          "amount": 2020.46,
+          "gst_rate": 18,
+          "hsn_code": "3923"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0112",
+          "vendor_name": "Ashok Packaging Pvt Ltd",
+          "issue_type": "gst_mismatch",
+          "description": "Custom printed boxes",
+          "hsn_code": "7010",
+          "taxable_amount": 854.91,
+          "invoice_gst_rate": 28,
+          "expected_gst_rate": 18,
+          "gst_overcharge": 85.49,
+          "overcharge": 85.49,
+          "line_index": 0,
+          "invoice_date": "2025-03-24",
+          "invoice_total": 3478.43
+        }
+      ],
+      "total_overcharge": 85.49
+    },
+    {
+      "invoice_id": "INV-0127",
+      "vendor_name": "Ecom Express Services",
+      "vendor_type": "logistics",
+      "invoice_date": "2025-02-23",
+      "subtotal": 7793.04,
+      "gst_amount": 1424.82,
+      "total": 9217.86,
+      "payment_terms": "Net 30",
+      "line_items": [
+        {
+          "description": "Freight charges - Zone C",
+          "quantity": 2,
+          "unit_price": 110.37,
+          "amount": 220.74,
+          "gst_rate": 28,
+          "hsn_code": "9966"
+        },
+        {
+          "description": "Freight charges - Zone C",
+          "quantity": 22,
+          "unit_price": 110.37,
+          "amount": 2428.14,
+          "gst_rate": 18,
+          "hsn_code": "9966"
+        },
+        {
+          "description": "RTO charges",
+          "quantity": 16,
+          "unit_price": 69.66,
+          "amount": 1114.56,
+          "gst_rate": 18,
+          "hsn_code": "9966"
+        },
+        {
+          "description": "COD handling",
+          "quantity": 23,
+          "unit_price": 175.2,
+          "amount": 4029.6,
+          "gst_rate": 18,
+          "hsn_code": "9965"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0127",
+          "vendor_name": "Ecom Express Services",
+          "issue_type": "gst_mismatch",
+          "description": "Freight charges - Zone C",
+          "hsn_code": "9966",
+          "taxable_amount": 220.74,
+          "invoice_gst_rate": 28,
+          "expected_gst_rate": 18,
+          "gst_overcharge": 22.07,
+          "overcharge": 22.07,
+          "line_index": 0,
+          "invoice_date": "2025-02-23",
+          "invoice_total": 9217.86
+        }
+      ],
+      "total_overcharge": 22.07
+    },
+    {
+      "invoice_id": "INV-0143",
+      "vendor_name": "Kaival Nutraceuticals",
+      "vendor_type": "raw_material",
+      "invoice_date": "2025-01-26",
+      "subtotal": 346728.25,
+      "gst_amount": 65074.98,
+      "total": 411803.23,
+      "payment_terms": "Net 60",
+      "line_items": [
+        {
+          "description": "Biotin powder 99%",
+          "quantity": 59,
+          "unit_price": 2281.9,
+          "amount": 134632.1,
+          "gst_rate": 28,
+          "hsn_code": "2106"
+        },
+        {
+          "description": "Collagen peptides",
+          "quantity": 71,
+          "unit_price": 1111.82,
+          "amount": 78939.22,
+          "gst_rate": 12,
+          "hsn_code": "3003"
+        },
+        {
+          "description": "Hyaluronic acid",
+          "quantity": 29,
+          "unit_price": 3484.46,
+          "amount": 101049.34,
+          "gst_rate": 12,
+          "hsn_code": "3003"
+        },
+        {
+          "description": "Minoxidil solution 5%",
+          "quantity": 9,
+          "unit_price": 3567.51,
+          "amount": 32107.59,
+          "gst_rate": 18,
+          "hsn_code": "2106"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0143",
+          "vendor_name": "Kaival Nutraceuticals",
+          "issue_type": "gst_mismatch",
+          "description": "Biotin powder 99%",
+          "hsn_code": "2106",
+          "taxable_amount": 134632.1,
+          "invoice_gst_rate": 28,
+          "expected_gst_rate": 18,
+          "gst_overcharge": 13463.21,
+          "overcharge": 13463.21,
+          "line_index": 0,
+          "invoice_date": "2025-01-26",
+          "invoice_total": 411803.23
+        }
+      ],
+      "total_overcharge": 13463.21
+    },
+    {
+      "invoice_id": "INV-0158",
+      "vendor_name": "DigiBoost Media",
+      "vendor_type": "marketing",
+      "invoice_date": "2025-02-25",
+      "subtotal": 4357412.41,
+      "gst_amount": 945966.05,
+      "total": 5303378.46,
+      "payment_terms": "Net 60",
+      "line_items": [
+        {
+          "description": "Video production",
+          "quantity": 35,
+          "unit_price": 46180.52,
+          "amount": 1616318.2,
+          "gst_rate": 28,
+          "hsn_code": "9984"
+        },
+        {
+          "description": "SEO services monthly",
+          "quantity": 27,
+          "unit_price": 16940.56,
+          "amount": 457395.12,
+          "gst_rate": 18,
+          "hsn_code": "9973"
+        },
+        {
+          "description": "Email campaign setup",
+          "quantity": 39,
+          "unit_price": 34989.96,
+          "amount": 1364608.44,
+          "gst_rate": 18,
+          "hsn_code": "9973"
+        },
+        {
+          "description": "Meta ad spend",
+          "quantity": 25,
+          "unit_price": 9658.73,
+          "amount": 241468.25,
+          "gst_rate": 18,
+          "hsn_code": "9984"
+        },
+        {
+          "description": "SEO services monthly",
+          "quantity": 40,
+          "unit_price": 16940.56,
+          "amount": 677622.4,
+          "gst_rate": 18,
+          "hsn_code": "9984"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0158",
+          "vendor_name": "DigiBoost Media",
+          "issue_type": "gst_mismatch",
+          "description": "Video production",
+          "hsn_code": "9984",
+          "taxable_amount": 1616318.2,
+          "invoice_gst_rate": 28,
+          "expected_gst_rate": 18,
+          "gst_overcharge": 161631.82,
+          "overcharge": 161631.82,
+          "line_index": 0,
+          "invoice_date": "2025-02-25",
+          "invoice_total": 5303378.46
+        }
+      ],
+      "total_overcharge": 161631.82
+    },
+    {
+      "invoice_id": "INV-0169",
+      "vendor_name": "Ashok Packaging Pvt Ltd",
+      "vendor_type": "packaging",
+      "invoice_date": "2025-06-24",
+      "subtotal": 53258.88,
+      "gst_amount": 9052.99,
+      "total": 62311.87,
+      "payment_terms": "Net 30",
+      "line_items": [
+        {
+          "description": "Air pillow packs",
+          "quantity": 32,
+          "unit_price": 298.12,
+          "amount": 9539.84,
+          "gst_rate": 28,
+          "hsn_code": "7010"
+        },
+        {
+          "description": "Mailer bags 10x12",
+          "quantity": 13,
+          "unit_price": 275.48,
+          "amount": 3581.24,
+          "gst_rate": 12,
+          "hsn_code": "4819"
+        },
+        {
+          "description": "Mailer bags 10x12",
+          "quantity": 77,
+          "unit_price": 275.48,
+          "amount": 21211.96,
+          "gst_rate": 12,
+          "hsn_code": "4819"
+        },
+        {
+          "description": "Bubble wrap roll 50m",
+          "quantity": 70,
+          "unit_price": 140.5,
+          "amount": 9835,
+          "gst_rate": 18,
+          "hsn_code": "7010"
+        },
+        {
+          "description": "Mailer bags 10x12",
+          "quantity": 33,
+          "unit_price": 275.48,
+          "amount": 9090.84,
+          "gst_rate": 18,
+          "hsn_code": "7010"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0169",
+          "vendor_name": "Ashok Packaging Pvt Ltd",
+          "issue_type": "gst_mismatch",
+          "description": "Air pillow packs",
+          "hsn_code": "7010",
+          "taxable_amount": 9539.84,
+          "invoice_gst_rate": 28,
+          "expected_gst_rate": 18,
+          "gst_overcharge": 953.98,
+          "overcharge": 953.98,
+          "line_index": 0,
+          "invoice_date": "2025-06-24",
+          "invoice_total": 62311.87
+        }
+      ],
+      "total_overcharge": 953.98
+    },
+    {
+      "invoice_id": "INV-0180",
+      "vendor_name": "Brandwise Digital",
+      "vendor_type": "marketing",
+      "invoice_date": "2025-06-06",
+      "subtotal": 6585296.34,
+      "gst_amount": 1461968.85,
+      "total": 8047265.19,
+      "payment_terms": "Net 30",
+      "line_items": [
+        {
+          "description": "Google Ads management",
+          "quantity": 72,
+          "unit_price": 38418.82,
+          "amount": 2766155.04,
+          "gst_rate": 28,
+          "hsn_code": "9984"
+        },
+        {
+          "description": "SEO services monthly",
+          "quantity": 78,
+          "unit_price": 28905.15,
+          "amount": 2254601.7,
+          "gst_rate": 18,
+          "hsn_code": "9983"
+        },
+        {
+          "description": "Influencer campaign fee",
+          "quantity": 52,
+          "unit_price": 30087.3,
+          "amount": 1564539.6,
+          "gst_rate": 18,
+          "hsn_code": "9983"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0180",
+          "vendor_name": "Brandwise Digital",
+          "issue_type": "gst_mismatch",
+          "description": "Google Ads management",
+          "hsn_code": "9984",
+          "taxable_amount": 2766155.04,
+          "invoice_gst_rate": 28,
+          "expected_gst_rate": 18,
+          "gst_overcharge": 276615.5,
+          "overcharge": 276615.5,
+          "line_index": 0,
+          "invoice_date": "2025-06-06",
+          "invoice_total": 8047265.19
+        }
+      ],
+      "total_overcharge": 276615.5
+    },
+    {
+      "invoice_id": "INV-0194",
+      "vendor_name": "PixelCraft Studios",
+      "vendor_type": "marketing",
+      "invoice_date": "2025-05-14",
+      "subtotal": 5377775.14,
+      "gst_amount": 1129377.34,
+      "total": 6507152.48,
+      "payment_terms": "Net 30",
+      "line_items": [
+        {
+          "description": "Creative production",
+          "quantity": 62,
+          "unit_price": 26028.68,
+          "amount": 1613778.16,
+          "gst_rate": 28,
+          "hsn_code": "9984"
+        },
+        {
+          "description": "Email campaign setup",
+          "quantity": 25,
+          "unit_price": 19401.48,
+          "amount": 485037,
+          "gst_rate": 18,
+          "hsn_code": "9983"
+        },
+        {
+          "description": "Influencer campaign fee",
+          "quantity": 38,
+          "unit_price": 46464.33,
+          "amount": 1765644.54,
+          "gst_rate": 18,
+          "hsn_code": "9984"
+        },
+        {
+          "description": "Email campaign setup",
+          "quantity": 57,
+          "unit_price": 19401.48,
+          "amount": 1105884.36,
+          "gst_rate": 18,
+          "hsn_code": "9973"
+        },
+        {
+          "description": "Email campaign setup",
+          "quantity": 21,
+          "unit_price": 19401.48,
+          "amount": 407431.08,
+          "gst_rate": 18,
+          "hsn_code": "9984"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0194",
+          "vendor_name": "PixelCraft Studios",
+          "issue_type": "gst_mismatch",
+          "description": "Creative production",
+          "hsn_code": "9984",
+          "taxable_amount": 1613778.16,
+          "invoice_gst_rate": 28,
+          "expected_gst_rate": 18,
+          "gst_overcharge": 161377.82,
+          "overcharge": 161377.82,
+          "line_index": 0,
+          "invoice_date": "2025-05-14",
+          "invoice_total": 6507152.48
+        }
+      ],
+      "total_overcharge": 161377.82
+    },
+    {
+      "invoice_id": "INV-0258",
+      "vendor_name": "Xpressbees Courier",
+      "vendor_type": "logistics",
+      "invoice_date": "2025-02-22",
+      "subtotal": 41238.91,
+      "gst_amount": 10357.85,
+      "total": 51596.76,
+      "payment_terms": "Net 30",
+      "line_items": [
+        {
+          "description": "Freight charges - Zone A",
+          "quantity": 69,
+          "unit_price": 425.34,
+          "amount": 29348.46,
+          "gst_rate": 28,
+          "hsn_code": "9966"
+        },
+        {
+          "description": "Fuel surcharge",
+          "quantity": 5,
+          "unit_price": 434.01,
+          "amount": 2170.05,
+          "gst_rate": 18,
+          "hsn_code": "9966"
+        },
+        {
+          "description": "Surface transport",
+          "quantity": 40,
+          "unit_price": 243.01,
+          "amount": 9720.4,
+          "gst_rate": 18,
+          "hsn_code": "9966"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0258",
+          "vendor_name": "Xpressbees Courier",
+          "issue_type": "gst_mismatch",
+          "description": "Freight charges - Zone A",
+          "hsn_code": "9966",
+          "taxable_amount": 29348.46,
+          "invoice_gst_rate": 28,
+          "expected_gst_rate": 18,
+          "gst_overcharge": 2934.85,
+          "overcharge": 2934.85,
+          "line_index": 0,
+          "invoice_date": "2025-02-22",
+          "invoice_total": 51596.76
+        }
+      ],
+      "total_overcharge": 2934.85
+    },
+    {
+      "invoice_id": "INV-0309",
+      "vendor_name": "PixelCraft Studios",
+      "vendor_type": "marketing",
+      "invoice_date": "2025-10-09",
+      "subtotal": 3595495.32,
+      "gst_amount": 715754.7,
+      "total": 4311250.02,
+      "payment_terms": "Net 45",
+      "line_items": [
+        {
+          "description": "SEO services monthly",
+          "quantity": 14,
+          "unit_price": 48975.39,
+          "amount": 685655.46,
+          "gst_rate": 28,
+          "hsn_code": "9984"
+        },
+        {
+          "description": "Creative production",
+          "quantity": 54,
+          "unit_price": 26028.68,
+          "amount": 1405548.72,
+          "gst_rate": 18,
+          "hsn_code": "9973"
+        },
+        {
+          "description": "SEO services monthly",
+          "quantity": 22,
+          "unit_price": 48975.39,
+          "amount": 1077458.58,
+          "gst_rate": 18,
+          "hsn_code": "9984"
+        },
+        {
+          "description": "Email campaign setup",
+          "quantity": 22,
+          "unit_price": 19401.48,
+          "amount": 426832.56,
+          "gst_rate": 18,
+          "hsn_code": "9983"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0309",
+          "vendor_name": "PixelCraft Studios",
+          "issue_type": "gst_mismatch",
+          "description": "SEO services monthly",
+          "hsn_code": "9984",
+          "taxable_amount": 685655.46,
+          "invoice_gst_rate": 28,
+          "expected_gst_rate": 18,
+          "gst_overcharge": 68565.55,
+          "overcharge": 68565.55,
+          "line_index": 0,
+          "invoice_date": "2025-10-09",
+          "invoice_total": 4311250.02
+        }
+      ],
+      "total_overcharge": 68565.55
+    },
+    {
+      "invoice_id": "INV-0331",
+      "vendor_name": "PixelCraft Studios",
+      "vendor_type": "marketing",
+      "invoice_date": "2025-07-23",
+      "subtotal": 3605832.24,
+      "gst_amount": 726452.61,
+      "total": 4332284.85,
+      "payment_terms": "Net 30",
+      "line_items": [
+        {
+          "description": "Video production",
+          "quantity": 19,
+          "unit_price": 40738.32,
+          "amount": 774028.08,
+          "gst_rate": 28,
+          "hsn_code": "9973"
+        },
+        {
+          "description": "Creative production",
+          "quantity": 72,
+          "unit_price": 26028.68,
+          "amount": 1874064.96,
+          "gst_rate": 18,
+          "hsn_code": "9983"
+        },
+        {
+          "description": "Google Ads management",
+          "quantity": 32,
+          "unit_price": 24837.06,
+          "amount": 794785.92,
+          "gst_rate": 18,
+          "hsn_code": "9984"
+        },
+        {
+          "description": "Video production",
+          "quantity": 4,
+          "unit_price": 40738.32,
+          "amount": 162953.28,
+          "gst_rate": 18,
+          "hsn_code": "9983"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0331",
+          "vendor_name": "PixelCraft Studios",
+          "issue_type": "gst_mismatch",
+          "description": "Video production",
+          "hsn_code": "9973",
+          "taxable_amount": 774028.08,
+          "invoice_gst_rate": 28,
+          "expected_gst_rate": 18,
+          "gst_overcharge": 77402.81,
+          "overcharge": 77402.81,
+          "line_index": 0,
+          "invoice_date": "2025-07-23",
+          "invoice_total": 4332284.85
+        }
+      ],
+      "total_overcharge": 77402.81
+    },
+    {
+      "invoice_id": "INV-0393",
+      "vendor_name": "Sai Pharma Ingredients",
+      "vendor_type": "raw_material",
+      "invoice_date": "2025-02-23",
+      "subtotal": 95239.18,
+      "gst_amount": 22840.78,
+      "total": 118079.96,
+      "payment_terms": "Net 30",
+      "line_items": [
+        {
+          "description": "Biotin powder 99%",
+          "quantity": 32,
+          "unit_price": 1780.54,
+          "amount": 56977.28,
+          "gst_rate": 28,
+          "hsn_code": "3304"
+        },
+        {
+          "description": "Minoxidil solution 5%",
+          "quantity": 34,
+          "unit_price": 1125.35,
+          "amount": 38261.9,
+          "gst_rate": 18,
+          "hsn_code": "3304"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0393",
+          "vendor_name": "Sai Pharma Ingredients",
+          "issue_type": "gst_mismatch",
+          "description": "Biotin powder 99%",
+          "hsn_code": "3304",
+          "taxable_amount": 56977.28,
+          "invoice_gst_rate": 28,
+          "expected_gst_rate": 18,
+          "gst_overcharge": 5697.73,
+          "overcharge": 5697.73,
+          "line_index": 0,
+          "invoice_date": "2025-02-23",
+          "invoice_total": 118079.96
+        }
+      ],
+      "total_overcharge": 5697.73
+    },
+    {
+      "invoice_id": "INV-0495",
+      "vendor_name": "Ecom Express Services",
+      "vendor_type": "logistics",
+      "invoice_date": "2025-01-19",
+      "subtotal": 8544.06,
+      "gst_amount": 2025.55,
+      "total": 10569.61,
+      "payment_terms": "Net 30",
+      "line_items": [
+        {
+          "description": "RTO charges",
+          "quantity": 70,
+          "unit_price": 69.66,
+          "amount": 4876.2,
+          "gst_rate": 28,
+          "hsn_code": "9966"
+        },
+        {
+          "description": "Fuel surcharge",
+          "quantity": 9,
+          "unit_price": 407.54,
+          "amount": 3667.86,
+          "gst_rate": 18,
+          "hsn_code": "9965"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0495",
+          "vendor_name": "Ecom Express Services",
+          "issue_type": "gst_mismatch",
+          "description": "RTO charges",
+          "hsn_code": "9966",
+          "taxable_amount": 4876.2,
+          "invoice_gst_rate": 28,
+          "expected_gst_rate": 18,
+          "gst_overcharge": 487.62,
+          "overcharge": 487.62,
+          "line_index": 0,
+          "invoice_date": "2025-01-19",
+          "invoice_total": 10569.61
+        }
+      ],
+      "total_overcharge": 487.62
+    },
+    {
+      "invoice_id": "INV-0055",
+      "vendor_name": "Xpressbees Courier",
+      "vendor_type": "logistics",
+      "invoice_date": "2025-08-01",
+      "subtotal": 6218.87,
+      "gst_amount": 1119.4,
+      "total": 7338.27,
+      "payment_terms": "Net 30",
+      "line_items": [
+        {
+          "description": "Fuel surcharge",
+          "quantity": 1,
+          "unit_price": 434.01,
+          "amount": 434.01,
+          "gst_rate": 18,
+          "hsn_code": "9965"
+        },
+        {
+          "description": "Freight charges - Zone C",
+          "quantity": 8,
+          "unit_price": 57.6,
+          "amount": 460.8,
+          "gst_rate": 18,
+          "hsn_code": "9965"
+        },
+        {
+          "description": "Freight charges - Zone C",
+          "quantity": 61,
+          "unit_price": 57.6,
+          "amount": 3513.6,
+          "gst_rate": 18,
+          "hsn_code": "9966"
+        },
+        {
+          "description": "Platform fee",
+          "quantity": 1,
+          "unit_price": 1810.46,
+          "amount": 1810.46,
+          "gst_rate": 18,
+          "hsn_code": "9988"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0055",
+          "vendor_name": "Xpressbees Courier",
+          "issue_type": "mystery_surcharge",
+          "description": "Platform fee",
+          "quantity": 1,
+          "unit_price": 1810.46,
+          "amount": 1810.46,
+          "hsn_code": "9988",
+          "overcharge": 1810.46,
+          "line_index": 3,
+          "invoice_date": "2025-08-01",
+          "invoice_total": 7338.27
+        }
+      ],
+      "total_overcharge": 1810.46
+    },
+    {
+      "invoice_id": "INV-0085",
+      "vendor_name": "Sai Pharma Ingredients",
+      "vendor_type": "raw_material",
+      "invoice_date": "2025-04-22",
+      "subtotal": 278531.41,
+      "gst_amount": 38257.4,
+      "total": 316788.81,
+      "payment_terms": "Net 45",
+      "line_items": [
+        {
+          "description": "Collagen peptides",
+          "quantity": 4,
+          "unit_price": 627.82,
+          "amount": 2511.28,
+          "gst_rate": 5,
+          "hsn_code": "2936"
+        },
+        {
+          "description": "Biotin powder 99%",
+          "quantity": 68,
+          "unit_price": 1780.54,
+          "amount": 121076.72,
+          "gst_rate": 18,
+          "hsn_code": "3304"
+        },
+        {
+          "description": "Collagen peptides",
+          "quantity": 10,
+          "unit_price": 627.82,
+          "amount": 6278.2,
+          "gst_rate": 18,
+          "hsn_code": "3304"
+        },
+        {
+          "description": "Collagen peptides",
+          "quantity": 63,
+          "unit_price": 627.82,
+          "amount": 39552.66,
+          "gst_rate": 5,
+          "hsn_code": "2936"
+        },
+        {
+          "description": "Biotin powder 99%",
+          "quantity": 60,
+          "unit_price": 1780.54,
+          "amount": 106832.4,
+          "gst_rate": 12,
+          "hsn_code": "3004"
+        },
+        {
+          "description": "Handling fee",
+          "quantity": 1,
+          "unit_price": 2280.15,
+          "amount": 2280.15,
+          "gst_rate": 18,
+          "hsn_code": "9988"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0085",
+          "vendor_name": "Sai Pharma Ingredients",
+          "issue_type": "mystery_surcharge",
+          "description": "Handling fee",
+          "quantity": 1,
+          "unit_price": 2280.15,
+          "amount": 2280.15,
+          "hsn_code": "9988",
+          "overcharge": 2280.15,
+          "line_index": 5,
+          "invoice_date": "2025-04-22",
+          "invoice_total": 316788.81
+        }
+      ],
+      "total_overcharge": 2280.15
+    },
+    {
+      "invoice_id": "INV-0150",
+      "vendor_name": "PixelCraft Studios",
+      "vendor_type": "marketing",
+      "invoice_date": "2025-05-24",
+      "subtotal": 3465523.17,
+      "gst_amount": 623794.17,
+      "total": 4089317.34,
+      "payment_terms": "Net 45",
+      "line_items": [
+        {
+          "description": "Influencer campaign fee",
+          "quantity": 57,
+          "unit_price": 46464.33,
+          "amount": 2648466.81,
+          "gst_rate": 18,
+          "hsn_code": "9973"
+        },
+        {
+          "description": "Email campaign setup",
+          "quantity": 42,
+          "unit_price": 19401.48,
+          "amount": 814862.16,
+          "gst_rate": 18,
+          "hsn_code": "9973"
+        },
+        {
+          "description": "Handling fee",
+          "quantity": 1,
+          "unit_price": 2194.2,
+          "amount": 2194.2,
+          "gst_rate": 18,
+          "hsn_code": "9988"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0150",
+          "vendor_name": "PixelCraft Studios",
+          "issue_type": "mystery_surcharge",
+          "description": "Handling fee",
+          "quantity": 1,
+          "unit_price": 2194.2,
+          "amount": 2194.2,
+          "hsn_code": "9988",
+          "overcharge": 2194.2,
+          "line_index": 2,
+          "invoice_date": "2025-05-24",
+          "invoice_total": 4089317.34
+        }
+      ],
+      "total_overcharge": 2194.2
+    },
+    {
+      "invoice_id": "INV-0161",
+      "vendor_name": "DigiBoost Media",
+      "vendor_type": "marketing",
+      "invoice_date": "2025-05-02",
+      "subtotal": 4648025.25,
+      "gst_amount": 836644.55,
+      "total": 5484669.8,
+      "payment_terms": "Net 45",
+      "line_items": [
+        {
+          "description": "Google Ads management",
+          "quantity": 54,
+          "unit_price": 49261.96,
+          "amount": 2660145.84,
+          "gst_rate": 18,
+          "hsn_code": "9983"
+        },
+        {
+          "description": "Video production",
+          "quantity": 43,
+          "unit_price": 46180.52,
+          "amount": 1985762.36,
+          "gst_rate": 18,
+          "hsn_code": "9983"
+        },
+        {
+          "description": "Handling fee",
+          "quantity": 1,
+          "unit_price": 2117.05,
+          "amount": 2117.05,
+          "gst_rate": 18,
+          "hsn_code": "9988"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0161",
+          "vendor_name": "DigiBoost Media",
+          "issue_type": "mystery_surcharge",
+          "description": "Handling fee",
+          "quantity": 1,
+          "unit_price": 2117.05,
+          "amount": 2117.05,
+          "hsn_code": "9988",
+          "overcharge": 2117.05,
+          "line_index": 2,
+          "invoice_date": "2025-05-02",
+          "invoice_total": 5484669.8
+        }
+      ],
+      "total_overcharge": 2117.05
+    },
+    {
+      "invoice_id": "INV-0177",
+      "vendor_name": "Ecom Express Services",
+      "vendor_type": "logistics",
+      "invoice_date": "2025-02-13",
+      "subtotal": 23511.42,
+      "gst_amount": 4232.06,
+      "total": 27743.48,
+      "payment_terms": "Net 45",
+      "line_items": [
+        {
+          "description": "COD handling",
+          "quantity": 71,
+          "unit_price": 175.2,
+          "amount": 12439.2,
+          "gst_rate": 18,
+          "hsn_code": "9965"
+        },
+        {
+          "description": "RTO charges",
+          "quantity": 4,
+          "unit_price": 69.66,
+          "amount": 278.64,
+          "gst_rate": 18,
+          "hsn_code": "9965"
+        },
+        {
+          "description": "Freight charges - Zone A",
+          "quantity": 65,
+          "unit_price": 137.79,
+          "amount": 8956.35,
+          "gst_rate": 18,
+          "hsn_code": "9965"
+        },
+        {
+          "description": "Documentation fee",
+          "quantity": 1,
+          "unit_price": 1837.23,
+          "amount": 1837.23,
+          "gst_rate": 18,
+          "hsn_code": "9988"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0177",
+          "vendor_name": "Ecom Express Services",
+          "issue_type": "mystery_surcharge",
+          "description": "Documentation fee",
+          "quantity": 1,
+          "unit_price": 1837.23,
+          "amount": 1837.23,
+          "hsn_code": "9988",
+          "overcharge": 1837.23,
+          "line_index": 3,
+          "invoice_date": "2025-02-13",
+          "invoice_total": 27743.48
+        }
+      ],
+      "total_overcharge": 1837.23
+    },
+    {
+      "invoice_id": "INV-0205",
+      "vendor_name": "Xpressbees Courier",
+      "vendor_type": "logistics",
+      "invoice_date": "2025-06-23",
+      "subtotal": 35276.12,
+      "gst_amount": 6349.7,
+      "total": 41625.82,
+      "payment_terms": "Net 60",
+      "line_items": [
+        {
+          "description": "Surface transport",
+          "quantity": 20,
+          "unit_price": 243.01,
+          "amount": 4860.2,
+          "gst_rate": 18,
+          "hsn_code": "9966"
+        },
+        {
+          "description": "Freight charges - Zone B",
+          "quantity": 62,
+          "unit_price": 373.77,
+          "amount": 23173.74,
+          "gst_rate": 18,
+          "hsn_code": "9965"
+        },
+        {
+          "description": "Freight charges - Zone A",
+          "quantity": 10,
+          "unit_price": 425.34,
+          "amount": 4253.4,
+          "gst_rate": 18,
+          "hsn_code": "9965"
+        },
+        {
+          "description": "Platform fee",
+          "quantity": 1,
+          "unit_price": 2988.78,
+          "amount": 2988.78,
+          "gst_rate": 18,
+          "hsn_code": "9988"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0205",
+          "vendor_name": "Xpressbees Courier",
+          "issue_type": "mystery_surcharge",
+          "description": "Platform fee",
+          "quantity": 1,
+          "unit_price": 2988.78,
+          "amount": 2988.78,
+          "hsn_code": "9988",
+          "overcharge": 2988.78,
+          "line_index": 3,
+          "invoice_date": "2025-06-23",
+          "invoice_total": 41625.82
+        }
+      ],
+      "total_overcharge": 2988.78
+    },
+    {
+      "invoice_id": "INV-0245",
+      "vendor_name": "DigiBoost Media",
+      "vendor_type": "marketing",
+      "invoice_date": "2025-10-05",
+      "subtotal": 9589694.88,
+      "gst_amount": 1726145.08,
+      "total": 11315839.96,
+      "payment_terms": "Net 45",
+      "line_items": [
+        {
+          "description": "Video production",
+          "quantity": 9,
+          "unit_price": 46180.52,
+          "amount": 415624.68,
+          "gst_rate": 18,
+          "hsn_code": "9973"
+        },
+        {
+          "description": "Creative production",
+          "quantity": 39,
+          "unit_price": 39574.7,
+          "amount": 1543413.3,
+          "gst_rate": 18,
+          "hsn_code": "9973"
+        },
+        {
+          "description": "Creative production",
+          "quantity": 80,
+          "unit_price": 39574.7,
+          "amount": 3165976,
+          "gst_rate": 18,
+          "hsn_code": "9983"
+        },
+        {
+          "description": "Google Ads management",
+          "quantity": 57,
+          "unit_price": 49261.96,
+          "amount": 2807931.72,
+          "gst_rate": 18,
+          "hsn_code": "9983"
+        },
+        {
+          "description": "Influencer campaign fee",
+          "quantity": 80,
+          "unit_price": 20686.59,
+          "amount": 1654927.2,
+          "gst_rate": 18,
+          "hsn_code": "9973"
+        },
+        {
+          "description": "Convenience charge",
+          "quantity": 1,
+          "unit_price": 1821.98,
+          "amount": 1821.98,
+          "gst_rate": 18,
+          "hsn_code": "9988"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0245",
+          "vendor_name": "DigiBoost Media",
+          "issue_type": "mystery_surcharge",
+          "description": "Convenience charge",
+          "quantity": 1,
+          "unit_price": 1821.98,
+          "amount": 1821.98,
+          "hsn_code": "9988",
+          "overcharge": 1821.98,
+          "line_index": 5,
+          "invoice_date": "2025-10-05",
+          "invoice_total": 11315839.96
+        }
+      ],
+      "total_overcharge": 1821.98
+    },
+    {
+      "invoice_id": "INV-0259",
+      "vendor_name": "Sri Lakshmi Plastics",
+      "vendor_type": "packaging",
+      "invoice_date": "2025-07-23",
+      "subtotal": 30966.32,
+      "gst_amount": 5482.33,
+      "total": 36448.65,
+      "payment_terms": "Net 60",
+      "line_items": [
+        {
+          "description": "Air pillow packs",
+          "quantity": 35,
+          "unit_price": 118.93,
+          "amount": 4162.55,
+          "gst_rate": 18,
+          "hsn_code": "3923"
+        },
+        {
+          "description": "Custom printed boxes",
+          "quantity": 8,
+          "unit_price": 190.84,
+          "amount": 1526.72,
+          "gst_rate": 12,
+          "hsn_code": "4819"
+        },
+        {
+          "description": "Bubble wrap roll 50m",
+          "quantity": 76,
+          "unit_price": 175.54,
+          "amount": 13341.04,
+          "gst_rate": 18,
+          "hsn_code": "7010"
+        },
+        {
+          "description": "Custom printed boxes",
+          "quantity": 59,
+          "unit_price": 190.84,
+          "amount": 11259.56,
+          "gst_rate": 18,
+          "hsn_code": "3923"
+        },
+        {
+          "description": "Convenience charge",
+          "quantity": 1,
+          "unit_price": 676.45,
+          "amount": 676.45,
+          "gst_rate": 18,
+          "hsn_code": "9988"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0259",
+          "vendor_name": "Sri Lakshmi Plastics",
+          "issue_type": "mystery_surcharge",
+          "description": "Convenience charge",
+          "quantity": 1,
+          "unit_price": 676.45,
+          "amount": 676.45,
+          "hsn_code": "9988",
+          "overcharge": 676.45,
+          "line_index": 4,
+          "invoice_date": "2025-07-23",
+          "invoice_total": 36448.65
+        }
+      ],
+      "total_overcharge": 676.45
+    },
+    {
+      "invoice_id": "INV-0295",
+      "vendor_name": "Ecom Express Services",
+      "vendor_type": "logistics",
+      "invoice_date": "2025-11-10",
+      "subtotal": 11159.85,
+      "gst_amount": 2008.77,
+      "total": 13168.62,
+      "payment_terms": "Net 60",
+      "line_items": [
+        {
+          "description": "COD handling",
+          "quantity": 41,
+          "unit_price": 175.2,
+          "amount": 7183.2,
+          "gst_rate": 18,
+          "hsn_code": "9966"
+        },
+        {
+          "description": "COD handling",
+          "quantity": 15,
+          "unit_price": 175.2,
+          "amount": 2628,
+          "gst_rate": 18,
+          "hsn_code": "9965"
+        },
+        {
+          "description": "Platform fee",
+          "quantity": 1,
+          "unit_price": 1348.65,
+          "amount": 1348.65,
+          "gst_rate": 18,
+          "hsn_code": "9988"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0295",
+          "vendor_name": "Ecom Express Services",
+          "issue_type": "mystery_surcharge",
+          "description": "Platform fee",
+          "quantity": 1,
+          "unit_price": 1348.65,
+          "amount": 1348.65,
+          "hsn_code": "9988",
+          "overcharge": 1348.65,
+          "line_index": 2,
+          "invoice_date": "2025-11-10",
+          "invoice_total": 13168.62
+        }
+      ],
+      "total_overcharge": 1348.65
+    },
+    {
+      "invoice_id": "INV-0363",
+      "vendor_name": "Sai Pharma Ingredients",
+      "vendor_type": "raw_material",
+      "invoice_date": "2025-05-08",
+      "subtotal": 277734.84,
+      "gst_amount": 49407.09,
+      "total": 327141.93,
+      "payment_terms": "Net 30",
+      "line_items": [
+        {
+          "description": "Collagen peptides",
+          "quantity": 13,
+          "unit_price": 627.82,
+          "amount": 8161.66,
+          "gst_rate": 18,
+          "hsn_code": "3305"
+        },
+        {
+          "description": "Hyaluronic acid",
+          "quantity": 45,
+          "unit_price": 4967.85,
+          "amount": 223553.25,
+          "gst_rate": 18,
+          "hsn_code": "2106"
+        },
+        {
+          "description": "Zinc gluconate",
+          "quantity": 8,
+          "unit_price": 4935.33,
+          "amount": 39482.64,
+          "gst_rate": 18,
+          "hsn_code": "3304"
+        },
+        {
+          "description": "Minoxidil solution 5%",
+          "quantity": 4,
+          "unit_price": 1125.35,
+          "amount": 4501.4,
+          "gst_rate": 5,
+          "hsn_code": "2936"
+        },
+        {
+          "description": "Convenience charge",
+          "quantity": 1,
+          "unit_price": 2035.89,
+          "amount": 2035.89,
+          "gst_rate": 18,
+          "hsn_code": "9988"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0363",
+          "vendor_name": "Sai Pharma Ingredients",
+          "issue_type": "mystery_surcharge",
+          "description": "Convenience charge",
+          "quantity": 1,
+          "unit_price": 2035.89,
+          "amount": 2035.89,
+          "hsn_code": "9988",
+          "overcharge": 2035.89,
+          "line_index": 4,
+          "invoice_date": "2025-05-08",
+          "invoice_total": 327141.93
+        }
+      ],
+      "total_overcharge": 2035.89
+    },
+    {
+      "invoice_id": "INV-0365",
+      "vendor_name": "Sai Pharma Ingredients",
+      "vendor_type": "raw_material",
+      "invoice_date": "2025-10-15",
+      "subtotal": 691011.19,
+      "gst_amount": 100692.43,
+      "total": 791703.62,
+      "payment_terms": "Net 30",
+      "line_items": [
+        {
+          "description": "Minoxidil solution 5%",
+          "quantity": 49,
+          "unit_price": 1125.35,
+          "amount": 55142.15,
+          "gst_rate": 18,
+          "hsn_code": "2106"
+        },
+        {
+          "description": "Hyaluronic acid",
+          "quantity": 15,
+          "unit_price": 4967.85,
+          "amount": 74517.75,
+          "gst_rate": 18,
+          "hsn_code": "2106"
+        },
+        {
+          "description": "Zinc gluconate",
+          "quantity": 80,
+          "unit_price": 4935.33,
+          "amount": 394826.4,
+          "gst_rate": 12,
+          "hsn_code": "3003"
+        },
+        {
+          "description": "Minoxidil solution 5%",
+          "quantity": 19,
+          "unit_price": 1125.35,
+          "amount": 21381.65,
+          "gst_rate": 18,
+          "hsn_code": "3304"
+        },
+        {
+          "description": "Biotin powder 99%",
+          "quantity": 80,
+          "unit_price": 1780.54,
+          "amount": 142443.2,
+          "gst_rate": 18,
+          "hsn_code": "3305"
+        },
+        {
+          "description": "Documentation fee",
+          "quantity": 1,
+          "unit_price": 2700.04,
+          "amount": 2700.04,
+          "gst_rate": 18,
+          "hsn_code": "9988"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0365",
+          "vendor_name": "Sai Pharma Ingredients",
+          "issue_type": "mystery_surcharge",
+          "description": "Documentation fee",
+          "quantity": 1,
+          "unit_price": 2700.04,
+          "amount": 2700.04,
+          "hsn_code": "9988",
+          "overcharge": 2700.04,
+          "line_index": 5,
+          "invoice_date": "2025-10-15",
+          "invoice_total": 791703.62
+        }
+      ],
+      "total_overcharge": 2700.04
+    },
+    {
+      "invoice_id": "INV-0479",
+      "vendor_name": "DigiBoost Media",
+      "vendor_type": "marketing",
+      "invoice_date": "2025-07-24",
+      "subtotal": 3074911.08,
+      "gst_amount": 553483.99,
+      "total": 3628395.07,
+      "payment_terms": "Net 30",
+      "line_items": [
+        {
+          "description": "Creative production",
+          "quantity": 16,
+          "unit_price": 39574.7,
+          "amount": 633195.2,
+          "gst_rate": 18,
+          "hsn_code": "9984"
+        },
+        {
+          "description": "Email campaign setup",
+          "quantity": 49,
+          "unit_price": 34989.96,
+          "amount": 1714508.04,
+          "gst_rate": 18,
+          "hsn_code": "9973"
+        },
+        {
+          "description": "Meta ad spend",
+          "quantity": 75,
+          "unit_price": 9658.73,
+          "amount": 724404.75,
+          "gst_rate": 18,
+          "hsn_code": "9983"
+        },
+        {
+          "description": "Handling fee",
+          "quantity": 1,
+          "unit_price": 2803.09,
+          "amount": 2803.09,
+          "gst_rate": 18,
+          "hsn_code": "9988"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0479",
+          "vendor_name": "DigiBoost Media",
+          "issue_type": "mystery_surcharge",
+          "description": "Handling fee",
+          "quantity": 1,
+          "unit_price": 2803.09,
+          "amount": 2803.09,
+          "hsn_code": "9988",
+          "overcharge": 2803.09,
+          "line_index": 3,
+          "invoice_date": "2025-07-24",
+          "invoice_total": 3628395.07
+        }
+      ],
+      "total_overcharge": 2803.09
+    },
+    {
+      "invoice_id": "INV-0006",
+      "vendor_name": "Naveen Corrugators",
+      "vendor_type": "packaging",
+      "invoice_date": "2025-12-12",
+      "subtotal": 24547.56,
+      "gst_amount": 4197.88,
+      "total": 28745.44,
+      "payment_terms": "Net 45",
+      "line_items": [
+        {
+          "description": "Tape rolls pack of 6",
+          "quantity": 80,
+          "unit_price": 115.5,
+          "amount": 9240,
+          "gst_rate": 18,
+          "hsn_code": "7010"
+        },
+        {
+          "description": "Tape rolls pack of 6",
+          "quantity": 25,
+          "unit_price": 115.5,
+          "amount": 2887.5,
+          "gst_rate": 18,
+          "hsn_code": "3923"
+        },
+        {
+          "description": "Mailer bags 10x12",
+          "quantity": 51,
+          "unit_price": 141.61,
+          "amount": 7222.11,
+          "gst_rate": 18,
+          "hsn_code": "7010"
+        },
+        {
+          "description": "Air pillow packs",
+          "quantity": 69,
+          "unit_price": 55.73,
+          "amount": 3845.37,
+          "gst_rate": 18,
+          "hsn_code": "3923"
+        },
+        {
+          "description": "Custom printed boxes",
+          "quantity": 5,
+          "unit_price": 25.31,
+          "amount": 126.55,
+          "gst_rate": 18,
+          "hsn_code": "3923"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0006",
+          "vendor_name": "Naveen Corrugators",
+          "issue_type": "subtotal_mismatch",
+          "stated_subtotal": 24547.56,
+          "calculated_subtotal": 23321.53,
+          "overcharge": 1226.03,
+          "invoice_date": "2025-12-12",
+          "invoice_total": 28745.44
+        }
+      ],
+      "total_overcharge": 1226.03
+    },
+    {
+      "invoice_id": "INV-0096",
+      "vendor_name": "Ecom Express Services",
+      "vendor_type": "logistics",
+      "invoice_date": "2025-05-07",
+      "subtotal": 6727.96,
+      "gst_amount": 771.94,
+      "total": 7499.9,
+      "payment_terms": "Net 30",
+      "line_items": [
+        {
+          "description": "Freight charges - Zone B",
+          "quantity": 5,
+          "unit_price": 138.76,
+          "amount": 693.8,
+          "gst_rate": 18,
+          "hsn_code": "9966"
+        },
+        {
+          "description": "Surface transport",
+          "quantity": 13,
+          "unit_price": 276.52,
+          "amount": 3594.76,
+          "gst_rate": 18,
+          "hsn_code": "9966"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0096",
+          "vendor_name": "Ecom Express Services",
+          "issue_type": "subtotal_mismatch",
+          "stated_subtotal": 6727.96,
+          "calculated_subtotal": 4288.56,
+          "overcharge": 2439.4,
+          "invoice_date": "2025-05-07",
+          "invoice_total": 7499.9
+        }
+      ],
+      "total_overcharge": 2439.4
+    },
+    {
+      "invoice_id": "INV-0176",
+      "vendor_name": "Ecom Express Services",
+      "vendor_type": "logistics",
+      "invoice_date": "2025-10-26",
+      "subtotal": 36874.36,
+      "gst_amount": 6152.27,
+      "total": 43026.63,
+      "payment_terms": "Net 45",
+      "line_items": [
+        {
+          "description": "Freight charges - Zone C",
+          "quantity": 15,
+          "unit_price": 110.37,
+          "amount": 1655.55,
+          "gst_rate": 18,
+          "hsn_code": "9966"
+        },
+        {
+          "description": "Freight charges - Zone B",
+          "quantity": 38,
+          "unit_price": 138.76,
+          "amount": 5272.88,
+          "gst_rate": 18,
+          "hsn_code": "9965"
+        },
+        {
+          "description": "Freight charges - Zone C",
+          "quantity": 59,
+          "unit_price": 110.37,
+          "amount": 6511.83,
+          "gst_rate": 18,
+          "hsn_code": "9965"
+        },
+        {
+          "description": "Surface transport",
+          "quantity": 75,
+          "unit_price": 276.52,
+          "amount": 20739,
+          "gst_rate": 18,
+          "hsn_code": "9965"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0176",
+          "vendor_name": "Ecom Express Services",
+          "issue_type": "subtotal_mismatch",
+          "stated_subtotal": 36874.36,
+          "calculated_subtotal": 34179.26,
+          "overcharge": 2695.1,
+          "invoice_date": "2025-10-26",
+          "invoice_total": 43026.63
+        }
+      ],
+      "total_overcharge": 2695.1
+    },
+    {
+      "invoice_id": "INV-0269",
+      "vendor_name": "Delhivery Logistics",
+      "vendor_type": "logistics",
+      "invoice_date": "2025-08-28",
+      "subtotal": 46599.38,
+      "gst_amount": 7914.17,
+      "total": 54513.55,
+      "payment_terms": "Net 60",
+      "line_items": [
+        {
+          "description": "Freight charges - Zone C",
+          "quantity": 38,
+          "unit_price": 373,
+          "amount": 14174,
+          "gst_rate": 18,
+          "hsn_code": "9965"
+        },
+        {
+          "description": "Surface transport",
+          "quantity": 61,
+          "unit_price": 488.42,
+          "amount": 29793.62,
+          "gst_rate": 18,
+          "hsn_code": "9966"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0269",
+          "vendor_name": "Delhivery Logistics",
+          "issue_type": "subtotal_mismatch",
+          "stated_subtotal": 46599.38,
+          "calculated_subtotal": 43967.62,
+          "overcharge": 2631.76,
+          "invoice_date": "2025-08-28",
+          "invoice_total": 54513.55
+        }
+      ],
+      "total_overcharge": 2631.76
+    },
+    {
+      "invoice_id": "INV-0436",
+      "vendor_name": "Ecom Express Services",
+      "vendor_type": "logistics",
+      "invoice_date": "2025-12-02",
+      "subtotal": 42211.84,
+      "gst_amount": 7065.31,
+      "total": 49277.15,
+      "payment_terms": "Net 45",
+      "line_items": [
+        {
+          "description": "Freight charges - Zone C",
+          "quantity": 15,
+          "unit_price": 110.37,
+          "amount": 1655.55,
+          "gst_rate": 18,
+          "hsn_code": "9965"
+        },
+        {
+          "description": "COD handling",
+          "quantity": 9,
+          "unit_price": 175.2,
+          "amount": 1576.8,
+          "gst_rate": 18,
+          "hsn_code": "9965"
+        },
+        {
+          "description": "COD handling",
+          "quantity": 73,
+          "unit_price": 175.2,
+          "amount": 12789.6,
+          "gst_rate": 18,
+          "hsn_code": "9965"
+        },
+        {
+          "description": "Fuel surcharge",
+          "quantity": 57,
+          "unit_price": 407.54,
+          "amount": 23229.78,
+          "gst_rate": 18,
+          "hsn_code": "9965"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0436",
+          "vendor_name": "Ecom Express Services",
+          "issue_type": "subtotal_mismatch",
+          "stated_subtotal": 42211.84,
+          "calculated_subtotal": 39251.73,
+          "overcharge": 2960.11,
+          "invoice_date": "2025-12-02",
+          "invoice_total": 49277.15
+        }
+      ],
+      "total_overcharge": 2960.11
+    },
+    {
+      "invoice_id": "INV-0457",
+      "vendor_name": "Delhivery Logistics",
+      "vendor_type": "logistics",
+      "invoice_date": "2025-04-10",
+      "subtotal": 41301.11,
+      "gst_amount": 6845.43,
+      "total": 48146.54,
+      "payment_terms": "Net 30",
+      "line_items": [
+        {
+          "description": "Surface transport",
+          "quantity": 70,
+          "unit_price": 488.42,
+          "amount": 34189.4,
+          "gst_rate": 18,
+          "hsn_code": "9966"
+        },
+        {
+          "description": "Freight charges - Zone C",
+          "quantity": 7,
+          "unit_price": 373,
+          "amount": 2611,
+          "gst_rate": 18,
+          "hsn_code": "9966"
+        },
+        {
+          "description": "Freight charges - Zone A",
+          "quantity": 61,
+          "unit_price": 20.16,
+          "amount": 1229.76,
+          "gst_rate": 18,
+          "hsn_code": "9966"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0457",
+          "vendor_name": "Delhivery Logistics",
+          "issue_type": "subtotal_mismatch",
+          "stated_subtotal": 41301.11,
+          "calculated_subtotal": 38030.16,
+          "overcharge": 3270.95,
+          "invoice_date": "2025-04-10",
+          "invoice_total": 48146.54
+        }
+      ],
+      "total_overcharge": 3270.95
+    },
+    {
+      "invoice_id": "INV-0483",
+      "vendor_name": "Primus Biotech",
+      "vendor_type": "raw_material",
+      "invoice_date": "2025-12-20",
+      "subtotal": 202433.43,
+      "gst_amount": 35904.68,
+      "total": 238338.11,
+      "payment_terms": "Net 45",
+      "line_items": [
+        {
+          "description": "Collagen peptides",
+          "quantity": 42,
+          "unit_price": 4069.27,
+          "amount": 170909.34,
+          "gst_rate": 18,
+          "hsn_code": "3305"
+        },
+        {
+          "description": "Biotin powder 99%",
+          "quantity": 11,
+          "unit_price": 2117.04,
+          "amount": 23287.44,
+          "gst_rate": 18,
+          "hsn_code": "3305"
+        },
+        {
+          "description": "Zinc gluconate",
+          "quantity": 5,
+          "unit_price": 1054.73,
+          "amount": 5273.65,
+          "gst_rate": 18,
+          "hsn_code": "3305"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0483",
+          "vendor_name": "Primus Biotech",
+          "issue_type": "subtotal_mismatch",
+          "stated_subtotal": 202433.43,
+          "calculated_subtotal": 199470.43,
+          "overcharge": 2963.0,
+          "invoice_date": "2025-12-20",
+          "invoice_total": 238338.11
+        }
+      ],
+      "total_overcharge": 2963.0
+    },
+    {
+      "invoice_id": "INV-0501",
+      "vendor_name": "Naveen Corrugators",
+      "vendor_type": "packaging",
+      "invoice_date": "2025-07-05",
+      "subtotal": 17633.29,
+      "gst_amount": 3128.43,
+      "total": 20761.72,
+      "payment_terms": "Net 60",
+      "line_items": [
+        {
+          "description": "Custom printed boxes",
+          "quantity": 30,
+          "unit_price": 25.31,
+          "amount": 759.3,
+          "gst_rate": 12,
+          "hsn_code": "4819"
+        },
+        {
+          "description": "Corrugated boxes 7x5x3",
+          "quantity": 16,
+          "unit_price": 112,
+          "amount": 1792,
+          "gst_rate": 18,
+          "hsn_code": "7010"
+        },
+        {
+          "description": "Bubble wrap roll 50m",
+          "quantity": 77,
+          "unit_price": 195.87,
+          "amount": 15081.99,
+          "gst_rate": 18,
+          "hsn_code": "7010"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0501",
+          "vendor_name": "Naveen Corrugators",
+          "issue_type": "duplicate_invoice",
+          "duplicate_of": "INV-0318",
+          "amount": 20761.72,
+          "overcharge": 20761.72,
+          "invoice_date": "2025-07-05",
+          "invoice_total": 20761.72
+        }
+      ],
+      "total_overcharge": 20761.72
+    },
+    {
+      "invoice_id": "INV-0502",
+      "vendor_name": "Brandwise Digital",
+      "vendor_type": "marketing",
+      "invoice_date": "2025-06-10",
+      "subtotal": 4069945.18,
+      "gst_amount": 732590.13,
+      "total": 4802535.31,
+      "payment_terms": "Net 45",
+      "line_items": [
+        {
+          "description": "SEO services monthly",
+          "quantity": 50,
+          "unit_price": 28905.15,
+          "amount": 1445257.5,
+          "gst_rate": 18,
+          "hsn_code": "9973"
+        },
+        {
+          "description": "Meta ad spend",
+          "quantity": 30,
+          "unit_price": 43948.26,
+          "amount": 1318447.8,
+          "gst_rate": 18,
+          "hsn_code": "9983"
+        },
+        {
+          "description": "Google Ads management",
+          "quantity": 34,
+          "unit_price": 38418.82,
+          "amount": 1306239.88,
+          "gst_rate": 18,
+          "hsn_code": "9983"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0502",
+          "vendor_name": "Brandwise Digital",
+          "issue_type": "duplicate_invoice",
+          "duplicate_of": "INV-0094",
+          "amount": 4802535.31,
+          "overcharge": 4802535.31,
+          "invoice_date": "2025-06-10",
+          "invoice_total": 4802535.31
+        }
+      ],
+      "total_overcharge": 4802535.31
+    },
+    {
+      "invoice_id": "INV-0503",
+      "vendor_name": "BlueDart Express",
+      "vendor_type": "logistics",
+      "invoice_date": "2025-09-06",
+      "subtotal": 26047.46,
+      "gst_amount": 4688.54,
+      "total": 30736,
+      "payment_terms": "Net 45",
+      "line_items": [
+        {
+          "description": "Freight charges - Zone C",
+          "quantity": 68,
+          "unit_price": 143.41,
+          "amount": 9751.88,
+          "gst_rate": 18,
+          "hsn_code": "9966"
+        },
+        {
+          "description": "Surface transport",
+          "quantity": 34,
+          "unit_price": 236.97,
+          "amount": 8056.98,
+          "gst_rate": 18,
+          "hsn_code": "9966"
+        },
+        {
+          "description": "Freight charges - Zone B",
+          "quantity": 8,
+          "unit_price": 274.62,
+          "amount": 2196.96,
+          "gst_rate": 18,
+          "hsn_code": "9965"
+        },
+        {
+          "description": "Freight charges - Zone B",
+          "quantity": 22,
+          "unit_price": 274.62,
+          "amount": 6041.64,
+          "gst_rate": 18,
+          "hsn_code": "9965"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0503",
+          "vendor_name": "BlueDart Express",
+          "issue_type": "duplicate_invoice",
+          "duplicate_of": "INV-0204",
+          "amount": 30736,
+          "overcharge": 30736,
+          "invoice_date": "2025-09-06",
+          "invoice_total": 30736
+        }
+      ],
+      "total_overcharge": 30736.0
+    },
+    {
+      "invoice_id": "INV-0504",
+      "vendor_name": "PixelCraft Studios",
+      "vendor_type": "marketing",
+      "invoice_date": "2025-10-19",
+      "subtotal": 3375522.36,
+      "gst_amount": 607594.02,
+      "total": 3983116.38,
+      "payment_terms": "Net 45",
+      "line_items": [
+        {
+          "description": "Video production",
+          "quantity": 70,
+          "unit_price": 40738.32,
+          "amount": 2851682.4,
+          "gst_rate": 18,
+          "hsn_code": "9984"
+        },
+        {
+          "description": "Email campaign setup",
+          "quantity": 27,
+          "unit_price": 19401.48,
+          "amount": 523839.96,
+          "gst_rate": 18,
+          "hsn_code": "9983"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0504",
+          "vendor_name": "PixelCraft Studios",
+          "issue_type": "duplicate_invoice",
+          "duplicate_of": "INV-0079",
+          "amount": 3983116.38,
+          "overcharge": 3983116.38,
+          "invoice_date": "2025-10-19",
+          "invoice_total": 3983116.38
+        }
+      ],
+      "total_overcharge": 3983116.38
+    },
+    {
+      "invoice_id": "INV-0505",
+      "vendor_name": "BlueDart Express",
+      "vendor_type": "logistics",
+      "invoice_date": "2025-12-14",
+      "subtotal": 24139.36,
+      "gst_amount": 4345.08,
+      "total": 28484.44,
+      "payment_terms": "Net 60",
+      "line_items": [
+        {
+          "description": "RTO charges",
+          "quantity": 18,
+          "unit_price": 411.43,
+          "amount": 7405.74,
+          "gst_rate": 18,
+          "hsn_code": "9965"
+        },
+        {
+          "description": "Fuel surcharge",
+          "quantity": 37,
+          "unit_price": 452.26,
+          "amount": 16733.62,
+          "gst_rate": 18,
+          "hsn_code": "9965"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0505",
+          "vendor_name": "BlueDart Express",
+          "issue_type": "duplicate_invoice",
+          "duplicate_of": "INV-0349",
+          "amount": 28484.44,
+          "overcharge": 28484.44,
+          "invoice_date": "2025-12-14",
+          "invoice_total": 28484.44
+        }
+      ],
+      "total_overcharge": 28484.44
+    },
+    {
+      "invoice_id": "INV-0506",
+      "vendor_name": "Naveen Corrugators",
+      "vendor_type": "packaging",
+      "invoice_date": "2025-08-29",
+      "subtotal": 28378.32,
+      "gst_amount": 5103.54,
+      "total": 33481.86,
+      "payment_terms": "Net 60",
+      "line_items": [
+        {
+          "description": "Custom printed boxes",
+          "quantity": 3,
+          "unit_price": 25.31,
+          "amount": 75.93,
+          "gst_rate": 12,
+          "hsn_code": "4819"
+        },
+        {
+          "description": "Corrugated boxes 7x5x3",
+          "quantity": 33,
+          "unit_price": 112,
+          "amount": 3696,
+          "gst_rate": 18,
+          "hsn_code": "3923"
+        },
+        {
+          "description": "Corrugated boxes 7x5x3",
+          "quantity": 62,
+          "unit_price": 112,
+          "amount": 6944,
+          "gst_rate": 18,
+          "hsn_code": "7010"
+        },
+        {
+          "description": "Shrink wrap rolls",
+          "quantity": 17,
+          "unit_price": 163.31,
+          "amount": 2776.27,
+          "gst_rate": 18,
+          "hsn_code": "3923"
+        },
+        {
+          "description": "Bubble wrap roll 50m",
+          "quantity": 76,
+          "unit_price": 195.87,
+          "amount": 14886.12,
+          "gst_rate": 18,
+          "hsn_code": "3923"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0506",
+          "vendor_name": "Naveen Corrugators",
+          "issue_type": "duplicate_invoice",
+          "duplicate_of": "INV-0325",
+          "amount": 33481.86,
+          "overcharge": 33481.86,
+          "invoice_date": "2025-08-29",
+          "invoice_total": 33481.86
+        }
+      ],
+      "total_overcharge": 33481.86
+    },
+    {
+      "invoice_id": "INV-0507",
+      "vendor_name": "Delhivery Logistics",
+      "vendor_type": "logistics",
+      "invoice_date": "2025-12-24",
+      "subtotal": 13125.05,
+      "gst_amount": 2362.51,
+      "total": 15487.56,
+      "payment_terms": "Net 45",
+      "line_items": [
+        {
+          "description": "RTO charges",
+          "quantity": 29,
+          "unit_price": 200.59,
+          "amount": 5817.11,
+          "gst_rate": 18,
+          "hsn_code": "9965"
+        },
+        {
+          "description": "Freight charges - Zone A",
+          "quantity": 64,
+          "unit_price": 20.16,
+          "amount": 1290.24,
+          "gst_rate": 18,
+          "hsn_code": "9965"
+        },
+        {
+          "description": "RTO charges",
+          "quantity": 30,
+          "unit_price": 200.59,
+          "amount": 6017.7,
+          "gst_rate": 18,
+          "hsn_code": "9966"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0507",
+          "vendor_name": "Delhivery Logistics",
+          "issue_type": "duplicate_invoice",
+          "duplicate_of": "INV-0394",
+          "amount": 15487.56,
+          "overcharge": 15487.56,
+          "invoice_date": "2025-12-24",
+          "invoice_total": 15487.56
+        }
+      ],
+      "total_overcharge": 15487.56
+    },
+    {
+      "invoice_id": "INV-0508",
+      "vendor_name": "PixelCraft Studios",
+      "vendor_type": "marketing",
+      "invoice_date": "2025-12-23",
+      "subtotal": 6221552.13,
+      "gst_amount": 1119879.38,
+      "total": 7341431.51,
+      "payment_terms": "Net 30",
+      "line_items": [
+        {
+          "description": "Video production",
+          "quantity": 63,
+          "unit_price": 40738.32,
+          "amount": 2566514.16,
+          "gst_rate": 18,
+          "hsn_code": "9984"
+        },
+        {
+          "description": "SEO services monthly",
+          "quantity": 19,
+          "unit_price": 48975.39,
+          "amount": 930532.41,
+          "gst_rate": 18,
+          "hsn_code": "9984"
+        },
+        {
+          "description": "Meta ad spend",
+          "quantity": 25,
+          "unit_price": 25987.08,
+          "amount": 649677,
+          "gst_rate": 18,
+          "hsn_code": "9984"
+        },
+        {
+          "description": "Video production",
+          "quantity": 42,
+          "unit_price": 40738.32,
+          "amount": 1711009.44,
+          "gst_rate": 18,
+          "hsn_code": "9984"
+        },
+        {
+          "description": "Meta ad spend",
+          "quantity": 14,
+          "unit_price": 25987.08,
+          "amount": 363819.12,
+          "gst_rate": 18,
+          "hsn_code": "9983"
+        }
+      ],
+      "issues": [
+        {
+          "invoice_id": "INV-0508",
+          "vendor_name": "PixelCraft Studios",
+          "issue_type": "duplicate_invoice",
+          "duplicate_of": "INV-0138",
+          "amount": 7341431.51,
+          "overcharge": 7341431.51,
+          "invoice_date": "2025-12-23",
+          "invoice_total": 7341431.51
+        }
+      ],
+      "total_overcharge": 7341431.51
+    }
+  ],
+  "overlap_analysis": {
+    "invoices_with_multiple_issue_types": 0,
+    "examples": []
+  }
+}
