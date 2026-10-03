@@ -263,8 +263,8 @@ The web application provides an intuitive finance workstation:
 
 ## Live Demo
 
-`Live Demo: Coming soon`
-
+[`Live Demo:`
+](https://invoice-audit-intelligence.vercel.app/)
 ---
 
 ## Author / Project Context
