@@ -1,274 +1,298 @@
 # Invoice Audit Intelligence
 
-**Automated invoice reconciliation and financial exposure detection system for corporate B2B billing.**
+**Automated B2B invoice reconciliation, deterministic audit engine, and financial exposure detection platform.**
+
+[![CI](https://github.com/osh-mkumar/invoice-audit-intelligence/actions/workflows/ci.yml/badge.svg)](https://github.com/osh-mkumar/invoice-audit-intelligence/actions/workflows/ci.yml)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-black?style=flat&logo=vercel)](https://invoice-audit-intelligence.vercel.app/)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue?style=flat&logo=github)](https://github.com/osh-mkumar/invoice-audit-intelligence)
+
+- **Live Application**: [https://invoice-audit-intelligence.vercel.app/](https://invoice-audit-intelligence.vercel.app/)
+- **Repository**: [https://github.com/osh-mkumar/invoice-audit-intelligence](https://github.com/osh-mkumar/invoice-audit-intelligence)
+
+---
 
 ## Overview
 
-Invoice Audit Intelligence is a deterministic Python audit engine and Next.js finance workstation designed to automate the discovery of billing errors, rate card violations, GST tax discrepancies, unauthorized surcharges, subtotal errors, and duplicate invoices. By evaluating vendor billing records against contracted rate schedules and statutory tax rates, the system calculates exact financial exposure down to the cent, providing accounting teams with a verified audit trail and an interactive investigation workstation.
+Invoice Audit Intelligence is an automated financial audit and reconciliation platform. It combines a deterministic Python audit engine with an interactive Next.js finance dashboard to identify vendor billing discrepancies, contract rate card violations, statutory tax miscalculations, uncontracted surcharges, subtotal errors, and duplicate billings.
+
+The platform provides two complementary operating modes:
+1. **Demo Audit**: An interactive exploration of the precomputed baseline dataset (508 corporate invoices).
+2. **Interactive Auditing**: On-demand audit execution via FastAPI for user-submitted invoices via manual web entry or batch file upload (JSON / CSV) against customizable vendor contracts and statutory GST rates.
 
 ---
 
-## Key Audit Results (Demo Audit)
+## Baseline Audit Findings (Mosaic Fellowship 2026 Dataset)
 
-Across the baseline demonstration dataset, the system achieved the following verified findings:
+Evaluated against the verified benchmark demonstration dataset:
 
-- **Invoices Analyzed**: `508`
-- **Flagged Invoices**: `65` (12.8% flagged rate)
-- **Invoices Not Flagged**: `443` (87.2% of dataset) — *Note: "Not flagged" indicates that no discrepancies were detected by the six implemented audit checks, rather than guaranteed commercial or legal correctness.*
-- **Total Potential Financial Exposure**: **`₹17,560,098.94`**
-- **Issue Breakdown**:
-  - **Duplicate Invoices**: 8 issues | `₹16,256,034.78` (92.6% of exposure)
-  - **GST Mismatches**: 15 issues | `₹1,200,082.26` (6.8% of exposure)
-  - **Calculation Errors**: 23 issues | `₹61,181.58` (0.3% of exposure)
-  - **Mystery Surcharges**: 12 issues | `₹24,613.97` (0.1% of exposure)
-  - **Subtotal Mismatches**: 7 issues | `₹18,186.35` (0.1% of exposure)
-  - **Rate Card Violations**: 0 issues | `₹0.00` (0.0% of exposure)
-- **Category Overlaps**: `0` (Zero multi-category invoice conflicts)
-- **Independent Recalculation Match**: **`PASSED`**
-- **Attribution**: *Demonstration dataset from the Mosaic Fellowship 2026 invoice auditing challenge.*
+| Metric | Result | Context |
+|---|---|---|
+| **Invoices Audited** | `508` | Total corporate vendor invoices evaluated |
+| **Flagged Invoices** | `65` | `12.8%` of total invoice volume |
+| **Invoices with No Issues Detected** | `443` | `87.2%` of invoices passed all checks* |
+| **Potential Financial Exposure** | **`₹17,560,098.94`** | Gross quantifiable discrepancy across flagged invoices |
+| **Independent Decimal Verification** | **`PASSED`** | Bit-for-bit match via independent script |
 
----
+*\*Note: "No issues detected" signifies that no discrepancies were triggered by the six deterministic audit rules; it does not constitute a legal or commercial guarantee of invoice correctness.*
 
-## Problem Statement
+### Exposure Breakdown by Category
 
-Enterprise finance and procurement operations process thousands of vendor invoices annually. Manual invoice auditing suffers from several structural vulnerabilities:
+| Audit Check | Flagged Issues | Potential Exposure | % of Total Exposure |
+|---|---|---|---|
+| **Duplicate Invoices** | 8 | ₹16,256,034.78 | 92.57% |
+| **GST Tax Mismatches** | 15 | ₹1,200,082.26 | 6.83% |
+| **Calculation Errors** | 23 | ₹61,181.58 | 0.35% |
+| **Mystery Surcharges** | 12 | ₹24,613.97 | 0.14% |
+| **Subtotal Mismatches** | 7 | ₹18,186.35 | 0.10% |
+| **Rate Card Violations** | 0 | ₹0.00 | 0.00% |
+| **Multi-Category Overlaps** | 0 | ₹0.00 | 0.00% |
+| **Total** | **65** | **₹17,560,098.94** | **100.0%** |
 
-1. **Arithmetic Human Error**: Billed line amounts (`quantity × unit_price`) are rarely manually recalculated at scale.
-2. **Contract Drift**: Vendors may invoice unapproved items or exceed contracted rate card pricing over long billing cycles.
-3. **Statutory Tax Misclassification**: Invoices frequently apply incorrect GST tax percentage bands for specific HSN codes.
-4. **Duplicate Submissions**: Identical invoices submitted across different dates or IDs often slip through manual approval workflows.
-
-This system provides automated, deterministic verification across 100% of incoming billing data to eliminate leakage prior to payment disbursement.
+*Dataset Attribution: Demonstration dataset from the Mosaic Fellowship 2026 invoice auditing challenge.*
 
 ---
 
-## Implemented Audit Checks
+## Six Deterministic Audit Checks
 
-The audit engine executes six distinct verification routines:
+The audit engine executes six rule-based verification routines without non-deterministic heuristics:
 
-1. **Calculation Errors (`check_calculation_errors`)**:
-   Re-computes line item arithmetic (`quantity × unit_price`) and flags any line item where the billed amount exceeds the expected product.
-2. **Rate Card Violations (`check_rate_card_violations`)**:
-   Compares billed unit prices against contracted rates stored in the vendor rate card, flagging price inflation above agreed contracts.
-3. **GST Mismatches (`check_gst_mismatches`)**:
-   Cross-references invoice GST tax rates against statutory reference rates mapped to specific HSN codes (e.g., 5%, 12%, 18%, 28%).
-4. **Mystery Surcharges (`check_mystery_surcharges`)**:
-   Identifies uncontracted line items that do not exist within that vendor's approved rate card schedule and flags the entire billed amount.
-5. **Subtotal Mismatches (`check_subtotal_mismatches`)**:
-   Sums all line item amounts per invoice and compares the total against the stated invoice subtotal to catch unlisted subtotal markups.
-6. **Duplicate Invoices (`check_duplicate_invoices`)**:
-   Generates a deterministic fingerprint (vendor name, line item descriptions, quantities, unit prices, amounts, subtotal, GST, total) to catch duplicate billing regardless of invoice ID or date.
+1. **Calculation Errors (`check_calculation_errors`)**  
+   Re-computes arithmetic products for each billed line item (`quantity × unit_price`) and flags any line item where the stated amount exceeds the calculated product.
+2. **Rate Card Violations (`check_rate_card_violations`)**  
+   Cross-references billed unit prices against contracted rate cards for each vendor. Flags contracted items billed at higher rates than agreed.
+3. **GST Rate Mismatches (`check_gst_mismatches`)**  
+   Verifies billed GST tax percentage bands against statutory tax reference rates mapped to specific HSN/SAC codes (e.g., 5%, 12%, 18%, 28%).
+4. **Mystery Surcharges (`check_mystery_surcharges`)**  
+   Flags uncontracted line items that do not appear in a contracted vendor's approved rate card schedule, isolating unauthorized fees.
+5. **Subtotal Mismatches (`check_subtotal_mismatches`)**  
+   Independently sums all line items and compares the result against the invoice stated subtotal to capture unaccounted subtotal adjustments.
+6. **Duplicate Invoices (`check_duplicate_invoices`)**  
+   Calculates a normalized content fingerprint (vendor, item descriptions, quantities, unit prices, amounts, tax, and totals) to detect duplicate billing submissions regardless of invoice number or date.
 
 ---
 
 ## System Architecture
 
-The pipeline processes raw data through an audit pipeline before serving formatted findings to the Next.js workstation:
-
 ```mermaid
 flowchart TD
-    subgraph Data Layer
-        A1[data/finance_invoices.json]
-        A2[data/finance_rate_card.json]
-        A3[data/finance_gst_reference.json]
+    subgraph Client ["Frontend (Next.js 16 + TypeScript)"]
+        UI1[Demo Dashboard]
+        UI2[Manual Entry Form]
+        UI3[JSON / CSV Upload]
+        UI4[Invoice Evidence Modal]
+        UI5[Custom Reference Modal]
     end
 
-    subgraph Audit Engine Python
-        B1[audit/loader.py] --> B2[audit/checks.py]
-        B2 --> B3[audit/engine.py]
-        B3 --> B4[audit/verify.py - Independent Check]
-        B3 --> B5[audit/generate_results.py]
+    subgraph StaticPath ["Static Demo Mode"]
+        STATIC[frontend/public/audit_results.json]
     end
 
-    subgraph Output Layer
-        C1[output/audit_results.json]
+    subgraph API ["Backend API (FastAPI + Pydantic v2)"]
+        EP1["GET /api/reference-data"]
+        EP2["POST /api/audit"]
+        VALID[Pydantic Request Validation]
     end
 
-    subgraph Web Workstation Next.js
-        D1[app/api/audit-results/route.ts] --> D2[Dashboard Overview]
-        D1 --> D3[Invoice Review Table]
-        D1 --> D4[Audit Queue]
-        D1 --> D5[Invoice Inspector Modal]
+    subgraph Engine ["Audit Engine (Python 3)"]
+        LOAD[Reference Loader]
+        C1[1. Calculation Errors]
+        C2[2. Rate Card Violations]
+        C3[3. GST Mismatches]
+        C4[4. Mystery Surcharges]
+        C5[5. Subtotal Mismatches]
+        C6[6. Duplicate Invoices]
+        EXPOSURE[Financial Exposure Aggregator]
     end
 
-    A1 --> B1
-    A2 --> B1
-    A3 --> B1
-    B5 --> C1
-    C1 --> D1
+    subgraph Persistence ["Persistence Layer (In Progress)"]
+        MODELS[SQLAlchemy 2.x Models]
+        MIGRATE[Alembic Migrations]
+        PG[(PostgreSQL / SQLite)]
+    end
+
+    UI1 --> STATIC
+    UI2 --> VALID
+    UI3 --> VALID
+    VALID --> EP2
+    EP2 --> LOAD
+    LOAD --> C1 & C2 & C3 & C4 & C5 & C6
+    C1 & C2 & C3 & C4 & C5 & C6 --> EXPOSURE
+    EXPOSURE --> EP2
+    EP2 --> UI4
+    MODELS -.-> MIGRATE -.-> PG
 ```
 
 ---
 
-## Tech Stack
-
-### Backend & Audit Engine
-- **Python 3.14**
-- **Pytest 9.1** (Automated unit & regression testing)
-- **Decimal Module** (Exact monetary arithmetic)
+## Technology Stack
 
 ### Frontend Workstation
-- **Next.js 16** (App Router)
-- **TypeScript 5**
-- **Tailwind CSS v4**
-- **Recharts** (Financial exposure visualizer)
-- **Lucide React** (UI Iconography)
+- **Framework**: Next.js 16 (App Router, Turbopack)
+- **Language**: TypeScript 5
+- **Styling**: Tailwind CSS v4
+- **Charts & UI**: Recharts, Lucide React
+- **Deployment**: Vercel
+
+### Backend & Audit Engine
+- **Framework**: FastAPI (Asynchronous REST API)
+- **Validation**: Pydantic v2 models
+- **Precision Arithmetic**: Python `Decimal` (zero floating-point rounding errors)
+- **Server**: Uvicorn ASGI
+
+### Persistence & Migrations (Schema Defined)
+- **ORM**: SQLAlchemy 2.x declarative models (`Numeric(14, 2)` monetary columns)
+- **Driver**: `psycopg` (v3 binary) for PostgreSQL / standard SQLite for test isolation
+- **Migrations**: Alembic with batch-mode alter support
+
+### Testing & CI
+- **Test Framework**: Pytest 9.x
+- **CI Pipeline**: GitHub Actions (Python tests + Next.js production build)
+- **Independent Verification**: Script recalculating exact totals from raw JSON records
 
 ---
 
-## Project Structure
+## Key Features
+
+1. **Precomputed Demo Dashboard**: Instant access to the 508-invoice benchmark dataset with KPI summary cards, exposure breakdown, and categorized issue queues.
+2. **Interactive Manual Entry**: Form interface for entering single or multi-line invoices with client-side arithmetic validation and vendor autocomplete.
+3. **JSON & CSV Batch File Ingestion**: Upload multi-invoice batches in standard formats with sample templates provided for testing.
+4. **Custom Reference Rates**: Ability to supply ad-hoc vendor rate cards and HSN GST tax schedules for auditing against custom contracts.
+5. **Itemized Evidence Inspector**: Audit findings modal highlighting exact discrepancy values: billed amount, expected amount, rate difference, and financial overcharge.
+6. **Separation of Demo and Custom Results**: New user audits compute metrics dynamically from submitted data without mixing into the benchmark baseline.
+
+---
+
+## Local Setup Instructions (Windows PowerShell)
+
+### Prerequisites
+- Python 3.10+
+- Node.js 18+ and npm
+- Git
+
+### 1. Clone the Repository
+```powershell
+git clone https://github.com/osh-mkumar/invoice-audit-intelligence.git
+cd "invoice-audit-intelligence"
+```
+
+### 2. Backend Setup
+```powershell
+# Create and activate a Python virtual environment (optional but recommended)
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+
+# Install backend dependencies
+python -m pip install --upgrade pip
+pip install -r requirements-dev.txt
+
+# Run the FastAPI development server
+python -m uvicorn backend.main:app --reload --port 8000
+```
+*The FastAPI backend will be available at [http://127.0.0.1:8000](http://127.0.0.1:8000) with interactive Swagger documentation at [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs).*
+
+### 3. Frontend Setup
+In a new PowerShell terminal:
+```powershell
+cd "invoice-audit-intelligence\frontend"
+
+# Install frontend dependencies
+npm install
+
+# Start Next.js development server
+npm run dev
+```
+*Open [http://localhost:3000](http://localhost:3000) to view the workstation.*
+
+---
+
+## Testing & Quality Assurance
+
+### Run the Pytest Test Suite
+The test suite includes 33 tests covering unit checks, API endpoints, serialization, database models, and full-dataset regression:
+```powershell
+python -m pytest -v
+```
+
+### Run Independent Decimal Verification
+Validates that the audit engine's calculations match an independently implemented reference script to the exact cent:
+```powershell
+python -X utf8 audit/verify.py
+```
+
+### Frontend Production Build
+Validates TypeScript compilation and static page generation:
+```powershell
+cd frontend
+npm run build
+```
+
+### Continuous Integration (GitHub Actions)
+Every push and pull request to `main` runs automated CI:
+- **Python Unit Tests**: Installs dependencies and runs the complete Pytest suite on Ubuntu.
+- **Frontend Production Build**: Installs npm dependencies and validates `npm run build`.
+
+---
+
+## Repository Structure
 
 ```text
-Invoice Audit Intelligence/
+invoice-audit-intelligence/
+├── .github/workflows/
+│   └── ci.yml                     # GitHub Actions CI workflow
+├── alembic/                       # Alembic database migrations
+│   ├── env.py
+│   └── versions/                  # Version migration scripts
 ├── audit/
-│   ├── checks.py               # 6 core audit check functions
-│   ├── engine.py               # Unified audit engine aggregator
-│   ├── loader.py               # Data loading & console reporting
-│   ├── generate_results.py     # JSON export generator for frontend
-│   └── verify.py               # Independent Decimal verification script
+│   ├── checks.py                  # 6 deterministic audit checks
+│   ├── engine.py                  # Audit aggregation engine
+│   ├── loader.py                  # Baseline data loader & CLI report
+│   ├── generate_results.py        # Generates precomputed demo JSON
+│   └── verify.py                  # Independent Decimal verification
+├── backend/
+│   ├── audit_service.py           # In-memory execution service
+│   ├── database.py                # Database connection & session factory
+│   ├── main.py                    # FastAPI application & endpoints
+│   ├── models.py                  # SQLAlchemy 2.x relational schema
+│   └── schemas.py                 # Pydantic request & response models
 ├── data/
-│   ├── finance_invoices.json       # 508 raw vendor invoices
-│   ├── finance_rate_card.json      # 15 vendor contracted rate schedules
-│   └── finance_gst_reference.json  # 14 statutory HSN GST tax rates
+│   ├── finance_invoices.json      # 508 raw benchmark invoices
+│   ├── finance_rate_card.json     # Contracted vendor rate cards
+│   └── finance_gst_reference.json # Statutory GST rate schedules
 ├── frontend/
-│   ├── app/
-│   │   ├── api/audit-results/  # Next.js API route serving audit results
-│   │   ├── globals.css         # Styling theme
-│   │   ├── layout.tsx          # Root layout
-│   │   └── page.tsx            # Main audit workstation page
-│   ├── components/
-│   │   ├── Sidebar.tsx         # Quiet navigation sidebar
-│   │   ├── HeroIntro.tsx       # Introduction & pipeline banner
-│   │   ├── KPICards.tsx        # Financial exposure & stats cards
-│   │   ├── HowItWorksSection.tsx # 4-step workflow guide
-│   │   ├── AuditChecksSection.tsx# 6-check category descriptions
-│   │   ├── ExposureBreakdownSection.tsx # Financial exposure breakdown & key findings
-│   │   ├── InvoiceTable.tsx    # Searchable/filterable flagged invoices table
-│   │   ├── IssuesList.tsx      # Audit Queue with Q&A structured findings
-│   │   ├── AuditSummarySection.tsx # Formal verification report
-│   │   └── InvoiceDetailModal.tsx  # Detailed invoice inspector modal
-│   ├── lib/
-│   │   └── utils.ts            # Currency formatters & explanation generators
-│   ├── types/
-│   │   └── audit.ts            # TypeScript interfaces
-│   └── package.json
-├── output/
-│   └── audit_results.json      # Generated audit results file
+│   ├── app/                       # Next.js App Router pages & API routes
+│   ├── components/                # React dashboard & audit components
+│   ├── lib/                       # Utility & formatting helpers
+│   ├── public/templates/          # Downloadable sample JSON & CSV files
+│   └── types/                     # TypeScript definitions
 ├── tests/
-│   ├── test_checks.py          # Synthetic unit tests for checks
-│   └── test_full_audit.py      # Full dataset regression tests
-├── requirements-dev.txt        # Development dependencies (pytest)
+│   ├── test_api.py                # FastAPI endpoint integration tests
+│   ├── test_checks.py             # Synthetic unit tests for checks
+│   ├── test_database.py           # Relational model & migration tests
+│   └── test_full_audit.py         # Full 508-invoice regression assertions
+├── alembic.ini                    # Alembic configuration
+├── requirements.txt               # Production Python dependencies
+├── requirements-dev.txt           # Development & testing dependencies
 └── README.md
 ```
 
 ---
 
-## Verification and Testing
+## Current Status & Roadmap
 
-The repository contains an automated Pytest test suite covering synthetic unit cases and full-dataset regression tests:
+- [x] Deterministic 6-check audit engine with Python `Decimal` precision
+- [x] Interactive Next.js finance dashboard with categorized queues
+- [x] Manual single/multi-line invoice entry and JSON/CSV upload
+- [x] FastAPI REST service with Pydantic validation
+- [x] Relational database schema (`AuditRun`, `Invoice`, `AuditFinding`, `FindingReview`, `VendorReference`) and Alembic migration
+- [ ] End-to-end database persistence for custom audits (Milestone 2)
+- [ ] Persistent Audit History sidebar and reopen workflow (Milestone 3)
+- [ ] Human review status decisions (*Pending*, *Approved*, *Confirmed Discrepancy*) with decision logs (Milestone 4)
+- [ ] Persistent vendor rate card updates and re-audit versioning (Milestone 5)
 
-- **Total Test Cases**: `9`
-- **Pass Rate**: **`9/9 PASSED`**
-- **Independent Verification**: [`audit/verify.py`](file:///d:/projects/Invoice%20Audit%20Intelligence/audit/verify.py) independently recalculates overcharges using Python's `Decimal` module and confirms zero discrepancies against engine output.
-- **Verification Status**: **`PASSED`**
-
----
-
-## Running Locally
-
-### Prerequisites
-- Python 3.10+
-- Node.js 18+ and npm
-
-### 1. Python Audit Engine & Tests
-
-Install development dependencies:
-```bash
-python -m pip install -r requirements-dev.txt
-```
-
-Run Pytest test suite:
-```bash
-python -m pytest -v
-```
-
-Execute the console audit report:
-```bash
-python audit/loader.py
-```
-
-Run independent verification script:
-```bash
-python audit/verify.py
-```
-
-Generate frontend results file:
-```bash
-python audit/generate_results.py
-```
-
-### 2. Next.js Frontend Workstation
-
-Navigate to frontend directory:
-```bash
-cd frontend
-```
-
-Install dependencies:
-```bash
-npm install
-```
-
-Build production bundle (verify zero TypeScript errors):
-```bash
-npm run build
-```
-
-Start dev server:
-```bash
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+*Note: The deployed Vercel application showcases the precomputed baseline demonstration. Auditing user-submitted custom invoices requires running the local FastAPI backend (`localhost:8000`). Database persistence and review decision tracking are defined in schema and currently in active implementation.*
 
 ---
 
-## Dashboard Features
+## License & Attribution
 
-The web application provides an intuitive finance workstation:
-
-- **Executive Overview**: Prominent display of total verified overcharge (`₹17.56M`) and 4-step workflow explanation.
-- **Exposure Breakdown**: Interactive breakdown of overcharges by category with proportional magnitude bars.
-- **Key Findings Panel**: Automatically derived insights highlighting the largest exposure (`Duplicate Invoices`) and most frequent issue (`Calculation Errors`).
-- **Invoice Investigation Table**: Filter flagged invoices by category or search by Invoice ID/Vendor.
-- **Audit Queue**: Dedicated findings queue structuring issues into *What is wrong?*, *What was billed*, *What should have been billed*, and *Financial impact*.
-- **Invoice Inspector Modal**: Detailed drill-down view showing invoice metadata, line items, and overcharge parameters.
-- **Formal Verification Report**: Independent audit verification matrix displaying category check results.
-
----
-
-## Design Decisions
-
-1. **Deterministic Engine**: Avoids non-deterministic AI/ML guessing to guarantee 100% mathematical precision for accounting compliance.
-2. **Separation of Checks**: Each check function in [`audit/checks.py`](file:///d:/projects/Invoice%20Audit%20Intelligence/audit/checks.py) is modular, stateless, and independently testable.
-3. **Regression Safety**: Full dataset regression assertions in [`tests/test_full_audit.py`](file:///d:/projects/Invoice%20Audit%20Intelligence/tests/test_full_audit.py) ensure numerical outputs remain immutable during refactoring.
-
----
-
-## Future Improvements
-
-- [ ] Automated PDF/CSV invoice parser for ingestion of unstructured billing documents.
-- [ ] ERP Integration connectors (SAP / QuickBooks / Tally API integration).
-- [ ] Vendor dispute workflow tracking with automated email demand letter generation.
-
----
-
-## Live Demo
-
-[`Live Demo:`
-](https://invoice-audit-intelligence.vercel.app/)
----
-
-## Author / Project Context
-
-This project was developed as an independent software engineering initiative focused on automated financial audit systems and data reconciliation using real synthetic billing datasets.
+This project was built using the demonstration dataset from the **Mosaic Fellowship 2026** invoice auditing challenge. Intended for technical evaluation and educational demonstration.
