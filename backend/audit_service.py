@@ -60,8 +60,9 @@ def get_available_reference_data() -> Dict[str, Any]:
 def execute_audit(request: AuditRequest) -> AuditResponse:
     """
     Executes the deterministic six-check audit on the submitted invoices.
-    Applies custom reference data overrides, tracks check coverage, and separates
-    confirmed recoverable overcharges from potential financial exposure.
+    Applies custom reference data overrides, tracks check coverage, enriches every
+    finding with exact evidence fields, and separates confirmed recoverable
+    overcharges from potential financial exposure.
     """
     # 1. Prepare Reference Data
     if request.use_default_reference_data:
@@ -114,7 +115,7 @@ def execute_audit(request: AuditRequest) -> AuditResponse:
     # Check 3: GST Mismatches (Statutory HSN tax rate comparison)
     gst_issues = check_gst_mismatches(invoices_data, gst_reference)
 
-    # Check 4: Mystery Surcharges (Uncontracted line items on invoices with established rate cards)
+    # Check 4: Mystery Surcharges / Uncontracted Charges
     # Per requirements: Never assume an unknown service is an unauthorized surcharge
     # solely because it is missing from a reference file. If vendor has no rate card, skip.
     mystery_issues = []
@@ -136,14 +137,70 @@ def execute_audit(request: AuditRequest) -> AuditResponse:
         + duplicate_issues
     )
 
-    # 4. Enrich Issues with metadata
+    # 4. Enrich Issues with complete evidence fields
     enriched_issues = []
     for issue in all_issues:
         inv_id = issue["invoice_id"]
         inv = invoice_map.get(inv_id, {})
+        line_items = inv.get("line_items", [])
+        
         enriched_issue = dict(issue)
         enriched_issue["invoice_date"] = inv.get("invoice_date", "")
         enriched_issue["invoice_total"] = inv.get("total", 0.0)
+        enriched_issue["stated_subtotal"] = inv.get("subtotal")
+
+        # Find matching line item if available
+        line_idx = issue.get("line_index")
+        line_item = None
+        if line_idx is not None and 0 <= line_idx < len(line_items):
+            line_item = line_items[line_idx]
+        elif issue.get("description"):
+            for it in line_items:
+                if it.get("description") == issue.get("description"):
+                    line_item = it
+                    break
+
+        if line_item:
+            if not enriched_issue.get("description"):
+                enriched_issue["description"] = line_item.get("description")
+            if enriched_issue.get("quantity") is None:
+                enriched_issue["quantity"] = line_item.get("quantity")
+            if enriched_issue.get("unit_price") is None:
+                enriched_issue["unit_price"] = line_item.get("unit_price")
+            if enriched_issue.get("billed_amount") is None:
+                enriched_issue["billed_amount"] = issue.get("amount") or line_item.get("amount")
+            if not enriched_issue.get("hsn_code"):
+                enriched_issue["hsn_code"] = line_item.get("hsn_code")
+            if enriched_issue.get("invoice_gst_rate") is None:
+                enriched_issue["invoice_gst_rate"] = line_item.get("gst_rate")
+            if enriched_issue.get("taxable_amount") is None:
+                enriched_issue["taxable_amount"] = line_item.get("amount")
+
+        # Type-specific evidence mapping
+        i_type = issue.get("issue_type")
+        if i_type == "rate_card_violation":
+            q = float(enriched_issue.get("quantity") or 1.0)
+            inv_p = float(enriched_issue.get("invoice_unit_price") or enriched_issue.get("unit_price") or 0.0)
+            cp = float(enriched_issue.get("contracted_price") or 0.0)
+            enriched_issue["billed_amount"] = round(q * inv_p, 2)
+            enriched_issue["expected_amount"] = round(q * cp, 2)
+            if enriched_issue.get("unit_price") is None:
+                enriched_issue["unit_price"] = inv_p
+        elif i_type == "mystery_surcharge":
+            enriched_issue["expected_amount"] = 0.0
+            if enriched_issue.get("billed_amount") is None:
+                enriched_issue["billed_amount"] = issue.get("amount")
+            enriched_issue["charge_classification"] = "unmatched_uncontracted_review"
+        elif i_type == "gst_mismatch":
+            if enriched_issue.get("billed_amount") is None:
+                enriched_issue["billed_amount"] = issue.get("taxable_amount")
+        elif i_type == "duplicate_invoice":
+            enriched_issue["billed_amount"] = inv.get("total")
+            enriched_issue["expected_amount"] = 0.0
+        elif i_type == "subtotal_mismatch":
+            enriched_issue["stated_subtotal"] = issue.get("stated_subtotal", inv.get("subtotal"))
+            enriched_issue["calculated_subtotal"] = issue.get("calculated_subtotal")
+
         enriched_issues.append(enriched_issue)
 
     # 5. Calculate Overcharges and Exposure
@@ -164,11 +221,11 @@ def execute_audit(request: AuditRequest) -> AuditResponse:
         2,
     )
 
-    # Confirmed recoverable overcharges (arithmetic errors, contract breaches, subtotal math, duplicates)
+    # Confirmed recoverable overcharges (arithmetic errors, contract price inflation, subtotal math, duplicates)
     confirmed_recoverable = round(
         calc_overcharge + rate_overcharge + subtotal_overcharge + duplicate_overcharge, 2
     )
-    # Potential exposure (GST reclassification & uncontracted items subject to review)
+    # Potential exposure (GST statutory rate variance & uncontracted charges requiring review)
     potential_exposure = round(gst_overcharge + mystery_overcharge, 2)
 
     # 6. Group Flagged Invoices
@@ -280,7 +337,6 @@ def execute_audit(request: AuditRequest) -> AuditResponse:
         )
 
     # Check 3: GST Mismatches
-    # Count line items evaluated against known HSN codes
     total_line_items = sum(len(inv.get("line_items", [])) for inv in invoices_data)
     matched_hsn_items = sum(
         1
@@ -311,14 +367,14 @@ def execute_audit(request: AuditRequest) -> AuditResponse:
             )
         )
 
-    # Check 4: Mystery Surcharges
+    # Check 4: Mystery Surcharges / Uncontracted Charges
     if len(invoices_with_rate_card) == len(invoices_data):
         checks_completed.append(
             CheckStatus(
                 check_name="mystery_surcharges",
-                display_name="Unauthorized Surcharge Audit",
+                display_name="Uncontracted Charge Audit",
                 status="completed",
-                message=f"Audited all line items for {len(invoices_data)} invoice(s) against approved catalog.",
+                message=f"Audited all line items for {len(invoices_data)} invoice(s) against contracted vendor rate schedules.",
                 invoices_evaluated=len(invoices_data),
                 issues_found=len(mystery_issues),
             )
@@ -327,9 +383,9 @@ def execute_audit(request: AuditRequest) -> AuditResponse:
         checks_completed.append(
             CheckStatus(
                 check_name="mystery_surcharges",
-                display_name="Unauthorized Surcharge Audit",
+                display_name="Uncontracted Charge Audit",
                 status="partial",
-                message=f"Evaluated {len(invoices_with_rate_card)} invoice(s) with known vendor rate schedules.",
+                message=f"Evaluated {len(invoices_with_rate_card)} invoice(s) with known vendor rate schedules. {len(invoices_without_rate_card)} invoice(s) skipped due to missing rate schedules.",
                 invoices_evaluated=len(invoices_with_rate_card),
                 issues_found=len(mystery_issues),
             )
@@ -337,9 +393,9 @@ def execute_audit(request: AuditRequest) -> AuditResponse:
         checks_skipped.append(
             CheckStatus(
                 check_name="mystery_surcharges",
-                display_name="Unauthorized Surcharge Audit",
+                display_name="Uncontracted Charge Audit",
                 status="skipped",
-                message=f"Skipped for uncontracted vendor(s) without rate schedule: {', '.join(sorted(vendors_missing_rate_card))}.",
+                message=f"Missing reference data: No rate schedule provided for vendor(s): {', '.join(sorted(vendors_missing_rate_card))}. Cannot determine whether services are uncontracted.",
                 invoices_evaluated=len(invoices_without_rate_card),
                 issues_found=0,
             )
@@ -348,9 +404,9 @@ def execute_audit(request: AuditRequest) -> AuditResponse:
         checks_skipped.append(
             CheckStatus(
                 check_name="mystery_surcharges",
-                display_name="Unauthorized Surcharge Audit",
+                display_name="Uncontracted Charge Audit",
                 status="skipped",
-                message="Skipped surcharge check because no vendor rate schedules were defined for submitted invoices.",
+                message="Skipped uncontracted charge audit: No rate schedules available for submitted vendors. Missing reference data prevents audit conclusion.",
                 invoices_evaluated=len(invoices_data),
                 issues_found=0,
             )
@@ -396,6 +452,7 @@ def execute_audit(request: AuditRequest) -> AuditResponse:
     flagged_invoices_list = [
         FlaggedInvoiceOutput(**item) for item in flagged_invoices_map.values()
     ]
+    no_issues_count = len(invoices_data) - len(flagged_invoices_list)
 
     summary = AuditSummaryOutput(
         invoices_audited=len(invoices_data),
@@ -433,6 +490,7 @@ def execute_audit(request: AuditRequest) -> AuditResponse:
             potential_financial_exposure=potential_exposure,
             total_overcharge=total_overcharge,
         ),
-        clean_invoices_count=len(invoices_data) - len(flagged_invoices_list),
+        clean_invoices_count=no_issues_count,
+        no_issues_detected_count=no_issues_count,
         flagged_invoices_count=len(flagged_invoices_list),
     )

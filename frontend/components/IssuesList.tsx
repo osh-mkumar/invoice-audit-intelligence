@@ -2,7 +2,7 @@
 
 import React, { useState, useMemo } from 'react';
 import { Issue, FlaggedInvoice } from '@/types/audit';
-import { formatCurrency, getIssueTypeBadge } from '@/lib/utils';
+import { formatCurrency, formatPercentage, getIssueTypeBadge } from '@/lib/utils';
 import { Search, Filter, ArrowRight, Copy } from 'lucide-react';
 
 interface IssuesListProps {
@@ -155,15 +155,15 @@ export default function IssuesList({
                       <>
                         <div>
                           <span className="text-slate-400 block text-[9px] uppercase font-sans">Billed GST</span>
-                          <span className="text-red-600 font-bold">{issue.invoice_gst_rate}%</span>
+                          <span className="text-red-600 font-bold">{formatPercentage(issue.invoice_gst_rate)}</span>
                         </div>
                         <div>
                           <span className="text-slate-400 block text-[9px] uppercase font-sans">Expected GST</span>
-                          <span className="text-emerald-700 font-bold">{issue.expected_gst_rate}%</span>
+                          <span className="text-emerald-700 font-bold">{formatPercentage(issue.expected_gst_rate)}</span>
                         </div>
                         <div>
-                          <span className="text-slate-400 block text-[9px] uppercase font-sans">Taxable Amount</span>
-                          <span className="text-slate-900">{formatCurrency(issue.taxable_amount || 0)}</span>
+                          <span className="text-slate-400 block text-[9px] uppercase font-sans">Taxable Line Amount</span>
+                          <span className="text-slate-900">{formatCurrency(issue.taxable_amount ?? issue.billed_amount ?? issue.amount)}</span>
                         </div>
                         <div>
                           <span className="text-slate-400 block text-[9px] uppercase font-sans">Exposure</span>
@@ -177,15 +177,37 @@ export default function IssuesList({
                       <>
                         <div>
                           <span className="text-slate-400 block text-[9px] uppercase font-sans">Stated Billed</span>
-                          <span className="text-red-600 font-bold">{formatCurrency(issue.billed_amount || 0)}</span>
+                          <span className="text-red-600 font-bold">{formatCurrency(issue.billed_amount ?? issue.amount)}</span>
                         </div>
                         <div>
                           <span className="text-slate-400 block text-[9px] uppercase font-sans">Expected Amount</span>
-                          <span className="text-emerald-700 font-bold">{formatCurrency(issue.expected_amount || 0)}</span>
+                          <span className="text-emerald-700 font-bold">{formatCurrency(issue.expected_amount)}</span>
                         </div>
                         <div className="col-span-2">
                           <span className="text-slate-400 block text-[9px] uppercase font-sans">Qty × Unit Price</span>
-                          <span className="text-slate-900">{issue.quantity} × {formatCurrency(issue.unit_price || 0)}</span>
+                          <span className="text-slate-900">
+                            {issue.quantity ?? 'N/A'} × {formatCurrency(issue.unit_price)}
+                          </span>
+                        </div>
+                      </>
+                    )}
+
+                    {/* Rate Card Violation specific */}
+                    {issue.issue_type === 'rate_card_violation' && (
+                      <>
+                        <div>
+                          <span className="text-slate-400 block text-[9px] uppercase font-sans">Billed Unit Price</span>
+                          <span className="text-red-600 font-bold">{formatCurrency(issue.invoice_unit_price ?? issue.unit_price)}</span>
+                        </div>
+                        <div>
+                          <span className="text-slate-400 block text-[9px] uppercase font-sans">Contracted Price</span>
+                          <span className="text-emerald-700 font-bold">{formatCurrency(issue.contracted_price)}</span>
+                        </div>
+                        <div className="col-span-2">
+                          <span className="text-slate-400 block text-[9px] uppercase font-sans">Contract Variance</span>
+                          <span className="text-slate-900">
+                            Qty: {issue.quantity ?? 'N/A'} • Overcharge: {formatCurrency(issue.overcharge)}
+                          </span>
                         </div>
                       </>
                     )}
@@ -195,11 +217,11 @@ export default function IssuesList({
                       <>
                         <div className="col-span-2">
                           <span className="text-slate-400 block text-[9px] uppercase font-sans">Billed Line Item</span>
-                          <span className="text-slate-900 font-sans font-semibold block truncate">{issue.description}</span>
+                          <span className="text-slate-900 font-sans font-semibold block truncate">{issue.description || 'Unspecified Item'}</span>
                         </div>
                         <div>
                           <span className="text-slate-400 block text-[9px] uppercase font-sans">Contract Status</span>
-                          <span className="text-red-600 font-bold">Uncontracted</span>
+                          <span className="text-purple-700 font-bold">Uncontracted</span>
                         </div>
                         <div>
                           <span className="text-slate-400 block text-[9px] uppercase font-sans">Exposure</span>
@@ -213,11 +235,11 @@ export default function IssuesList({
                       <>
                         <div>
                           <span className="text-slate-400 block text-[9px] uppercase font-sans">Stated Subtotal</span>
-                          <span className="text-red-600 font-bold">{formatCurrency(issue.stated_subtotal || 0)}</span>
+                          <span className="text-red-600 font-bold">{formatCurrency(issue.stated_subtotal)}</span>
                         </div>
                         <div>
                           <span className="text-slate-400 block text-[9px] uppercase font-sans">Calculated Sum</span>
-                          <span className="text-emerald-700 font-bold">{formatCurrency(issue.calculated_subtotal || 0)}</span>
+                          <span className="text-emerald-700 font-bold">{formatCurrency(issue.calculated_subtotal)}</span>
                         </div>
                       </>
                     )}
@@ -227,7 +249,7 @@ export default function IssuesList({
                       <>
                         <div>
                           <span className="text-slate-400 block text-[9px] uppercase font-sans">Duplicate Of</span>
-                          <span className="text-[#176B3A] font-bold">{issue.duplicate_of}</span>
+                          <span className="text-[#176B3A] font-bold">{issue.duplicate_of || 'Prior Invoice'}</span>
                         </div>
                         <div>
                           <span className="text-slate-400 block text-[9px] uppercase font-sans">Exposure</span>

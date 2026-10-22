@@ -10,6 +10,8 @@ interface InvoiceTableProps {
   onSelectInvoice: (inv: FlaggedInvoice) => void;
   selectedCategoryFilter: string | null;
   onSelectCategoryFilter: (cat: string | null) => void;
+  totalAuditedCount?: number;
+  notFlaggedCount?: number;
 }
 
 export default function InvoiceTable({
@@ -17,6 +19,8 @@ export default function InvoiceTable({
   onSelectInvoice,
   selectedCategoryFilter,
   onSelectCategoryFilter,
+  totalAuditedCount = 508,
+  notFlaggedCount = 443,
 }: InvoiceTableProps) {
   const [searchQuery, setSearchQuery] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
@@ -72,10 +76,10 @@ export default function InvoiceTable({
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div>
             <h3 className="text-sm font-bold text-slate-900 uppercase tracking-wide">
-              Invoices requiring attention
+              Exception Review Queue ({filteredInvoices.length} Flagged Invoices)
             </h3>
             <p className="text-xs text-slate-500 mt-0.5">
-              {filteredInvoices.length} invoices contain one or more detected billing anomalies.
+              Showing {filteredInvoices.length} invoice(s) with detected billing anomalies out of {totalAuditedCount} total audited ({notFlaggedCount} with no issues detected).
             </p>
           </div>
 

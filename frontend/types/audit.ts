@@ -45,6 +45,7 @@ export interface FlaggedInvoice {
   line_items?: LineItem[];
   issues: Issue[];
   total_overcharge: number;
+  is_clean?: boolean;
 }
 
 export interface AuditSummary {
@@ -67,6 +68,21 @@ export interface AuditBreakdown {
   duplicate_invoices: number;
 }
 
+export interface CheckStatus {
+  check_name: string;
+  display_name: string;
+  status: 'completed' | 'skipped' | 'partial';
+  message: string;
+  invoices_evaluated: number;
+  issues_found: number;
+}
+
+export interface ExposureDistinction {
+  confirmed_recoverable_overcharges: number;
+  potential_financial_exposure: number;
+  total_overcharge: number;
+}
+
 export interface AuditResults {
   summary: AuditSummary;
   breakdown: AuditBreakdown;
@@ -76,4 +92,30 @@ export interface AuditResults {
     invoices_with_multiple_issue_types: number;
     examples: any[];
   };
+  checks_completed?: CheckStatus[];
+  checks_skipped?: CheckStatus[];
+  exposure_distinction?: ExposureDistinction;
+  clean_invoices_count?: number;
+  flagged_invoices_count?: number;
+  audit_id?: string;
+  audit_title?: string;
+  is_demo?: boolean;
+}
+
+export interface AuditBatchItem {
+  invoice_id: string;
+  vendor_name: string;
+  invoice_date?: string;
+  subtotal: number;
+  gst_amount?: number;
+  total: number;
+  payment_terms?: string;
+  vendor_type?: string;
+  line_items: LineItem[];
+}
+
+export interface ReferenceData {
+  vendors: string[];
+  rate_cards: Record<string, Record<string, number>>;
+  gst_reference: Record<string, number>;
 }

@@ -78,6 +78,10 @@ class IssueOutput(BaseModel):
     line_index: Optional[int] = None
     invoice_date: Optional[str] = None
     invoice_total: Optional[float] = None
+    charge_classification: Optional[str] = Field(
+        None,
+        description="e.g. 'unmatched_uncontracted_review' or 'prohibited_charge'"
+    )
 
 
 class FlaggedInvoiceOutput(BaseModel):
@@ -117,11 +121,11 @@ class AuditBreakdownOutput(BaseModel):
 class ExposureDistinction(BaseModel):
     confirmed_recoverable_overcharges: float = Field(
         ...,
-        description="Calculation errors, rate card violations, subtotal mismatches, duplicate invoices"
+        description="Calculation errors, rate card price inflation on contracted items, subtotal mismatches, duplicate invoices"
     )
     potential_financial_exposure: float = Field(
         ...,
-        description="GST mismatches (statutory tax variance) and mystery surcharges (uncontracted items)"
+        description="Statutory GST tax differences and uncontracted charges requiring commercial review"
     )
     total_overcharge: float
 
@@ -141,4 +145,5 @@ class AuditResponse(BaseModel):
     checks_skipped: List[CheckStatus]
     exposure_distinction: ExposureDistinction
     clean_invoices_count: int
+    no_issues_detected_count: int
     flagged_invoices_count: int

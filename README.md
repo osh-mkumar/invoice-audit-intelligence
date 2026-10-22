@@ -8,13 +8,14 @@ Invoice Audit Intelligence is a deterministic Python audit engine and Next.js fi
 
 ---
 
-## Key Audit Results
+## Key Audit Results (Demo Audit)
 
-Across the full dataset, the system achieved the following verified findings:
+Across the baseline demonstration dataset, the system achieved the following verified findings:
 
-- **Invoices Audited**: `508`
-- **Flagged Invoices**: `65` (12.8% of dataset)
-- **Total Verified Overcharge**: **`₹17,560,098.94`**
+- **Invoices Analyzed**: `508`
+- **Flagged Invoices**: `65` (12.8% flagged rate)
+- **Invoices Not Flagged**: `443` (87.2% of dataset) — *Note: "Not flagged" indicates that no discrepancies were detected by the six implemented audit checks, rather than guaranteed commercial or legal correctness.*
+- **Total Potential Financial Exposure**: **`₹17,560,098.94`**
 - **Issue Breakdown**:
   - **Duplicate Invoices**: 8 issues | `₹16,256,034.78` (92.6% of exposure)
   - **GST Mismatches**: 15 issues | `₹1,200,082.26` (6.8% of exposure)
@@ -24,6 +25,7 @@ Across the full dataset, the system achieved the following verified findings:
   - **Rate Card Violations**: 0 issues | `₹0.00` (0.0% of exposure)
 - **Category Overlaps**: `0` (Zero multi-category invoice conflicts)
 - **Independent Recalculation Match**: **`PASSED`**
+- **Attribution**: *Demonstration dataset from the Mosaic Fellowship 2026 invoice auditing challenge.*
 
 ---
 

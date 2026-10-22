@@ -1,0 +1,17 @@
+{
+  "custom_rate_card": {
+    "Apex Logistics Solutions": {
+      "Express Cargo Transport - Zone A": 250.0,
+      "Surface Courier Delivery": 200.0
+    },
+    "Pinnacle Packaging Ltd": {
+      "Corrugated Heavy Shipping Boxes": 150.0,
+      "Protective Air Cushion Rolls": 150.0
+    }
+  },
+  "custom_gst_reference": {
+    "9965": 18.0,
+    "4819": 12.0,
+    "3923": 12.0
+  }
+}
